@@ -22,7 +22,6 @@
 		"@sveltejs/enhanced-img": "^0.10.4",
 		"@sveltejs/kit": "^2.57.0",
 		"@sveltejs/vite-plugin-svelte": "^7.0.0",
-		"@tailwindcss/forms": "^0.5.11",
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.2.2",
 		"@types/node": "^22",
@@ -49,6 +48,7 @@
 	"dependencies": {
 		"embla-carousel-autoplay": "^8.6.0",
 		"embla-carousel-svelte": "^8.6.0",
+		"gsap": "^3.15.0",
 		"motion-sv": "^0.1.12",
 		"runed": "^0.37.1",
 		"uuidv4": "^6.2.13"

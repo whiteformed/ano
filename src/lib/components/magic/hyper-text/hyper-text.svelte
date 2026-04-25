@@ -2,17 +2,16 @@
 	import { cn } from '$lib/utils';
 	import { motion, AnimatePresence } from 'motion-sv';
 	import { onMount, type SvelteComponent } from 'svelte';
+	import type { SvelteHTMLElements } from 'svelte/elements';
 
 	type CharacterSet = string[] | readonly string[];
-
-	type ElementType = 'div' | 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 	interface HyperTextProps {
 		text: string;
 		class?: string;
 		duration?: number;
 		delay?: number;
-		as?: ElementType;
+		as?: keyof SvelteHTMLElements;
 		startOnView?: boolean;
 		animateOnHover?: boolean;
 		characterSet?: CharacterSet;
@@ -26,7 +25,7 @@
 		as = 'div',
 		startOnView = false,
 		animateOnHover = true,
-		characterSet = Object.freeze('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')) as readonly string[],
+		characterSet = Object.freeze('АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'.split('')) as readonly string[],
 	}: HyperTextProps = $props();
 
 	let MotionComponent = $derived(motion[as]);

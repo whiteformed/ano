@@ -9,11 +9,13 @@
 		type Easing,
 	} from 'motion-sv';
 	import type { Snippet } from 'svelte';
+	import type { SvelteHTMLElements } from 'svelte/elements';
 
 	type MarginType = string;
 
 	interface BlurFadeProps {
 		children: Snippet;
+		as?: keyof SvelteHTMLElements;
 		class?: string;
 		containerClass?: string;
 		variant?: Variants;
@@ -31,6 +33,7 @@
 
 	let {
 		children,
+		as = 'div',
 		class: className,
 		containerClass: containerClassName,
 		variant,
@@ -46,7 +49,10 @@
 		once = true,
 	}: BlurFadeProps = $props();
 
+	let MotionComponent = $derived(motion[as]);
+
 	let containerRef: HTMLDivElement | null = $state(null);
+
 	let view = useInView(
 		() => containerRef!,
 		() =>
@@ -79,7 +85,7 @@
 
 <div bind:this={containerRef} class={cn(containerClassName)}>
 	<AnimatePresence>
-		<motion.div
+		<MotionComponent
 			initial="hidden"
 			animate={shouldAnimate ? 'visible' : 'hidden'}
 			exit={exit ? 'hidden' : undefined}
@@ -92,6 +98,6 @@
 			class={cn(className)}
 		>
 			{@render children()}
-		</motion.div>
+		</MotionComponent>
 	</AnimatePresence>
 </div>
