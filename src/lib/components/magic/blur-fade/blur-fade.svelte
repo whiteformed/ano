@@ -6,6 +6,7 @@
 		useInView,
 		type Variants,
 		type UseInViewOptions,
+		type Easing,
 	} from 'motion-sv';
 	import type { Snippet } from 'svelte';
 
@@ -21,6 +22,7 @@
 		delay?: number;
 		offset?: number;
 		direction?: 'up' | 'down' | 'left' | 'right';
+		ease?: Easing;
 		triggerOnView?: boolean;
 		inViewMargin?: MarginType;
 		blur?: string;
@@ -37,6 +39,7 @@
 		delay = 0,
 		offset = 6,
 		direction = 'down',
+		ease = 'easeOut',
 		triggerOnView = true,
 		inViewMargin = '-50px',
 		blur = '0',
@@ -84,7 +87,7 @@
 			transition={{
 				delay,
 				duration,
-				ease: ['circOut'],
+				ease,
 			}}
 			class={cn(className)}
 		>

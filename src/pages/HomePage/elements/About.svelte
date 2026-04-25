@@ -64,7 +64,13 @@
 							<div class="py-2 px-4 bg-white black">
 								<div class="flex">
 									Сейчас
-									<BlurFade delay={2} direction="right" offset={20} class="inline-block">
+									<BlurFade
+										delay={2}
+										direction="right"
+										offset={20}
+										ease="circOut"
+										class="inline-block"
+									>
 										<span>!</span>
 									</BlurFade>
 								</div>
