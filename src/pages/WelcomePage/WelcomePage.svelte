@@ -9,7 +9,7 @@
 	<BlurFade delay={0.2} offset={40} duration={0.4} class="h-fit w-fit flex flex-col items-center">
 		<HyperText
 			delay={100}
-			text="СВЕТПОЗНАНИЯ."
+			text="светпознания."
 			animateOnHover={false}
 			class="w-fit text-4xl md:text-6xl"
 		/>

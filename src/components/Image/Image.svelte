@@ -1,8 +1,7 @@
 <script lang="ts">
 	import type { Picture } from '@sveltejs/enhanced-img';
-	import Carousel from '$components/Carousel/Carousel.svelte';
-	import CarouselSlide from '$components/Carousel/CarouselSlide.svelte';
-	import Modal from '$components/Modal.svelte';
+	import Modal from '$components/Modal/Modal.svelte';
+	import * as Carousel from '$lib/components/ui/carousel/index.js';
 	import type { EmblaCarouselType } from 'embla-carousel';
 	import type { HTMLImgAttributes } from 'svelte/elements';
 	import { twMerge, type ClassNameValue } from 'tailwind-merge';
@@ -90,13 +89,15 @@
 {#if useViewer}
 	<Modal bind:visible bind:ref={modalRef}>
 		<div class="h-full w-full max-w-8/10 max-h-8/10 not-md:max-w-full">
-			<Carousel bind:emblaApi={carouselApi} options={{ autoPlay: false }}>
-				{#each imageGroup as image, index (index)}
-					<CarouselSlide>
-						<div {@attach renderNode(image)}></div>
-					</CarouselSlide>
-				{/each}
-			</Carousel>
+			<Carousel.Root>
+				<Carousel.Content>
+					{#each imageGroup as image, index (index)}
+						<Carousel.Item>
+							<div {@attach renderNode(image)}></div>
+						</Carousel.Item>
+					{/each}
+				</Carousel.Content>
+			</Carousel.Root>
 		</div>
 	</Modal>
 {/if}

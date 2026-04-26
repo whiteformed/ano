@@ -25,7 +25,9 @@
 		as = 'div',
 		startOnView = false,
 		animateOnHover = true,
-		characterSet = Object.freeze('АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'.split('')) as readonly string[],
+		characterSet = Object.freeze(
+			'АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ1234567890'.split(''),
+		) as readonly string[],
 	}: HyperTextProps = $props();
 
 	let MotionComponent = $derived(motion[as]);
