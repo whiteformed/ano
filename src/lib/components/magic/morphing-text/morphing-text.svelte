@@ -8,7 +8,7 @@
 		class?: string;
 	}
 
-	let { texts, autoplay = true, class: className }: MorphingTextProps = $props();
+	let { texts, autoplay = false, class: className }: MorphingTextProps = $props();
 
 	const morphTime = 1.5;
 	const cooldownTime = 0.5;
