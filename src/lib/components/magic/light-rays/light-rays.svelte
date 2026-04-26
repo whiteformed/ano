@@ -78,12 +78,10 @@
 >
 	<div class="absolute inset-0 overflow-hidden">
 		<div
-			aria-hidden="true"
 			class="absolute inset-0 opacity-60"
 			style="background: radial-gradient(circle at 20% 15%, color-mix(in srgb, var(--light-rays-color) 45%, transparent), transparent 70%)"
 		></div>
 		<div
-			aria-hidden="true"
 			class="absolute inset-0 opacity-60"
 			style="background: radial-gradient(circle at 80% 10%, color-mix(in srgb, var(--light-rays-color) 35%, transparent), transparent 75%)"
 		></div>

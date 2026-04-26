@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
 	import { motion, AnimatePresence } from 'motion-sv';
-	import { onMount, type SvelteComponent } from 'svelte';
+	import { onMount, type Snippet } from 'svelte';
 	import type { SvelteHTMLElements } from 'svelte/elements';
 
 	type CharacterSet = string[] | readonly string[];
 
 	interface HyperTextProps {
+		children?: Snippet;
 		text: string;
 		class?: string;
 		duration?: number;
@@ -18,13 +19,14 @@
 	}
 
 	let {
+		children,
 		text,
 		class: className,
 		duration = 800,
 		delay = 0,
-		as = 'div',
+		as = 'span',
 		startOnView = false,
-		animateOnHover = true,
+		animateOnHover = false,
 		characterSet = Object.freeze(
 			'АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ1234567890'.split(''),
 		) as readonly string[],
@@ -35,7 +37,7 @@
 	let displayText = $state<string[]>([]);
 	let isAnimating = $state(false);
 	let iterationCount = $state(0);
-	let elementRef: SvelteComponent | null = $state(null);
+	let elementRef: HTMLElement | null = $state(null);
 
 	// Initialize displayText when text changes
 	$effect(() => {
@@ -115,15 +117,16 @@
 </script>
 
 <MotionComponent
-	bind:this={elementRef}
-	class={cn('overflow-hidden py-2 text-4xl font-medium', className)}
+	ref={elementRef}
+	class={cn('overflow-hidden py-2 text-4xl font-medium font-mono', className)}
 	onmouseenter={handleAnimationTrigger}
 >
 	<AnimatePresence>
 		{#each displayText as letter, index (index)}
-			<motion.span class={cn('font-mono', letter === ' ' ? 'w-3' : '')}>
+			<motion.span class={cn(letter === ' ' ? 'w-3' : '')}>
 				{letter.toUpperCase()}
 			</motion.span>
 		{/each}
+		{@render children?.()}
 	</AnimatePresence>
 </MotionComponent>

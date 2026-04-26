@@ -2,14 +2,14 @@
 	import type { Picture } from '@sveltejs/enhanced-img';
 	import Modal from '$components/Modal/Modal.svelte';
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
+	import { cn } from '$lib/utils';
 	import type { EmblaCarouselType } from 'embla-carousel';
 	import type { HTMLImgAttributes } from 'svelte/elements';
-	import { twMerge, type ClassNameValue } from 'tailwind-merge';
 	import { v4 as uuidv4 } from 'uuid';
 
 	type Props = Omit<HTMLImgAttributes, 'src'> & {
 		src: string | Picture;
-		class?: ClassNameValue;
+		class?: string;
 		groupId?: string;
 		useViewer?: boolean;
 	};
@@ -78,7 +78,7 @@
 		bind:this={ref}
 		{src}
 		{alt}
-		class={twMerge(classNameValue, useViewer && 'cursor-pointer')}
+		class={cn(classNameValue, useViewer && 'cursor-pointer')}
 		{draggable}
 		onclick={handleToggle}
 		{...dataAttributes}

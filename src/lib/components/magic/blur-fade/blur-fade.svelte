@@ -11,8 +11,6 @@
 	import type { Snippet } from 'svelte';
 	import type { SvelteHTMLElements } from 'svelte/elements';
 
-	type MarginType = string;
-
 	interface BlurFadeProps {
 		children: Snippet;
 		as?: keyof SvelteHTMLElements;
@@ -26,7 +24,7 @@
 		direction?: 'up' | 'down' | 'left' | 'right';
 		ease?: Easing;
 		triggerOnView?: boolean;
-		inViewMargin?: MarginType;
+		inViewMargin?: string;
 		blur?: string;
 		once?: boolean;
 	}

@@ -47,11 +47,7 @@
 						duration={0.4}
 						class="h-fit w-fit flex flex-col items-center"
 					>
-						<HyperText
-							text={section.title}
-							animateOnHover={false}
-							class="w-fit text-4xl md:text-6xl"
-						/>
+						<HyperText text={section.title} class="w-fit text-4xl md:text-6xl" />
 						<DitherShader
 							src={Lotus}
 							class="h-40 w-40"

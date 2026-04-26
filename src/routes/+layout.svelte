@@ -3,6 +3,7 @@
 	import './layout.css';
 	import { page } from '$app/state';
 	import favicon from '$images/favicon.png';
+	import { Toaster } from '$lib/components/ui/sonner';
 
 	const { children }: LayoutProps = $props();
 
@@ -30,6 +31,8 @@
 	<meta property="og:image:alt" content="светпознания.рф" />
 	<meta property="og:type" content="website" />
 </svelte:head>
+
+<Toaster />
 
 <main>
 	{@render children()}

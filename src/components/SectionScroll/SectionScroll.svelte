@@ -15,6 +15,7 @@
 		let sections = document.querySelectorAll<HTMLElement>('section'),
 			outerWrappers = gsap.utils.toArray<HTMLElement>('.outer'),
 			innerWrappers = gsap.utils.toArray<HTMLElement>('.inner'),
+			wrap = gsap.utils.wrap(0, sections.length),
 			currentIndex = -1;
 
 		let animating = false;
@@ -23,6 +24,7 @@
 		gsap.set(innerWrappers, { yPercent: -100 });
 
 		function gotoSection(index: number, direction: number) {
+			index = wrap(index); // make sure it's valid
 			animating = true;
 			let tl = gsap.timeline({
 				defaults: { duration: 1.25, ease: 'power1.inOut' },
@@ -43,6 +45,8 @@
 				},
 				0,
 			);
+
+			currentIndex = index;
 		}
 
 		Observer.create({
