@@ -11,6 +11,9 @@
 
 		<!-- <span class="font-mono text-6xl self-start">
 			СВЕТ<MorphingText texts={['ПОЗНАНИЯ.', 'НАУКИ.', 'КУЛЬТУРЫ.', 'ИСКУССТВА.']} />
+            </span> -->
+		<!-- <span class="font-mono text-6xl self-start">
+			СВЕТ<RotatingText words={['ПОЗНАНИЯ', 'НАУКИ', 'КУЛЬТУРЫ', 'ИСКУССТВА']} />
 		</span> -->
 
 		<DitherShader src={Lotus} class="h-40 w-40" />
