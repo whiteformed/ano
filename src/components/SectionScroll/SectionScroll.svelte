@@ -23,17 +23,11 @@
 		gsap.set(innerWrappers, { yPercent: -100 });
 
 		function gotoSection(index: number, direction: number) {
-			console.log('🚀 ~ currentIndex:', currentIndex);
-			console.log('🚀 ~ gotoSection ~ index:', index);
-			console.log('🚀 ~ gotoSection ~ direction:', direction);
-
 			animating = true;
-			let fromTop = direction === -1,
-				dFactor = fromTop ? -1 : 1,
-				tl = gsap.timeline({
-					defaults: { duration: 1.25, ease: 'power1.inOut' },
-					onComplete: () => (animating = false),
-				});
+			let tl = gsap.timeline({
+				defaults: { duration: 1.25, ease: 'power1.inOut' },
+				onComplete: () => (animating = false),
+			});
 			if (currentIndex >= 0) {
 				// The first time this function runs, current is -1
 				gsap.set(sections[currentIndex], { zIndex: 0 });
@@ -42,15 +36,13 @@
 			tl.fromTo(
 				[outerWrappers[index], innerWrappers[index]],
 				{
-					yPercent: (i) => (i ? -100 * dFactor : 100 * dFactor),
+					yPercent: (i) => (i ? -100 * direction : 100 * direction),
 				},
 				{
 					yPercent: 0,
 				},
 				0,
 			);
-
-			currentIndex = index;
 		}
 
 		Observer.create({
