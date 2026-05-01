@@ -3,12 +3,12 @@
 	import { onMount, onDestroy } from 'svelte';
 
 	interface MorphingTextProps {
-		texts: string[];
-		autoplay?: boolean;
+		words: string[];
+		loop?: boolean;
 		class?: string;
 	}
 
-	let { texts, autoplay = false, class: className }: MorphingTextProps = $props();
+	let { words, loop = false, class: className }: MorphingTextProps = $props();
 
 	const morphTime = 1.5;
 	const cooldownTime = 0.5;
@@ -28,7 +28,7 @@
 	let animationFrameId: number | null = null;
 
 	const setStyles = (fraction: number) => {
-		if (!autoplay && animationFrameId && textIndex + 1 > texts.length) {
+		if (!loop && animationFrameId && textIndex + 1 === words.length) {
 			cancelAnimationFrame(animationFrameId);
 			return;
 		}
@@ -47,8 +47,8 @@
 		text1Ref.style.filter = `blur(${Math.min(8 / invertedFraction - 8, 100)}px)`;
 		text1Ref.style.opacity = `${Math.pow(invertedFraction, 0.4) * 100}%`;
 
-		text1Content = texts[textIndex % texts.length];
-		text2Content = texts[(textIndex + 1) % texts.length];
+		text1Content = words[textIndex % words.length];
+		text2Content = words[(textIndex + 1) % words.length];
 	};
 
 	const doMorph = () => {

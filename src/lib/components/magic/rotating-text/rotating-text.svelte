@@ -7,13 +7,17 @@
 		words?: string[];
 		duration?: number;
 		class?: string;
+		loop?: boolean;
 	}
 
-	let { words = [], duration = 2500, class: className = '' }: Props = $props();
+	let { words = [], duration = 2500, loop = false, class: className = '' }: Props = $props();
 
 	let index = $state(0);
 	let chnageIndex = () => {
-		index = (index + 1) % words.length;
+		const nextIndex = index + 1;
+		if (loop || nextIndex !== words.length) {
+			index = (index + 1) % words.length;
+		}
 	};
 	onMount(() => {
 		let interval = setInterval(chnageIndex, duration);
@@ -30,9 +34,8 @@
 		>
 			{words[index]}
 		</div>
+		<span class={cn(className, 'invisible text-center')}>
+			{words[index]}
+		</span>
 	{/key}
-
-	<span class="invisible">
-		{words[index]}
-	</span>
 </div>

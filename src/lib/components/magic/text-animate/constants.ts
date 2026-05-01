@@ -42,7 +42,7 @@ export const defaultItemAnimationVariants: Record<
 	fadeIn: {
 		container: defaultContainerVariants,
 		item: {
-			hidden: { opacity: 0, y: 20 },
+			hidden: { opacity: 0, y: 40 },
 			show: {
 				opacity: 1,
 				y: 0,
@@ -52,7 +52,7 @@ export const defaultItemAnimationVariants: Record<
 			},
 			exit: {
 				opacity: 0,
-				y: 20,
+				y: 40,
 				transition: { duration: 0.3 },
 			},
 		},
@@ -60,7 +60,7 @@ export const defaultItemAnimationVariants: Record<
 	blurIn: {
 		container: defaultContainerVariants,
 		item: {
-			hidden: { opacity: 0, filter: 'blur(10px)' },
+			hidden: { opacity: 0, filter: 'blur(2px)' },
 			show: {
 				opacity: 1,
 				filter: 'blur(0px)',
@@ -78,7 +78,7 @@ export const defaultItemAnimationVariants: Record<
 	blurInUp: {
 		container: defaultContainerVariants,
 		item: {
-			hidden: { opacity: 0, filter: 'blur(10px)', y: 20 },
+			hidden: { opacity: 0, filter: 'blur(2px)', y: 40 },
 			show: {
 				opacity: 1,
 				filter: 'blur(0px)',
@@ -92,7 +92,7 @@ export const defaultItemAnimationVariants: Record<
 			exit: {
 				opacity: 0,
 				filter: 'blur(10px)',
-				y: 20,
+				y: 40,
 				transition: {
 					y: { duration: 0.3 },
 					opacity: { duration: 0.4 },
@@ -104,7 +104,7 @@ export const defaultItemAnimationVariants: Record<
 	blurInDown: {
 		container: defaultContainerVariants,
 		item: {
-			hidden: { opacity: 0, filter: 'blur(10px)', y: -20 },
+			hidden: { opacity: 0, filter: 'blur(10px)', y: -40 },
 			show: {
 				opacity: 1,
 				filter: 'blur(0px)',
@@ -120,7 +120,7 @@ export const defaultItemAnimationVariants: Record<
 	slideUp: {
 		container: defaultContainerVariants,
 		item: {
-			hidden: { y: 20, opacity: 0 },
+			hidden: { y: 40, opacity: 0 },
 			show: {
 				y: 0,
 				opacity: 1,
@@ -129,7 +129,7 @@ export const defaultItemAnimationVariants: Record<
 				},
 			},
 			exit: {
-				y: -20,
+				y: -40,
 				opacity: 0,
 				transition: {
 					duration: 0.3,
@@ -140,14 +140,14 @@ export const defaultItemAnimationVariants: Record<
 	slideDown: {
 		container: defaultContainerVariants,
 		item: {
-			hidden: { y: -20, opacity: 0 },
+			hidden: { y: -40, opacity: 0 },
 			show: {
 				y: 0,
 				opacity: 1,
 				transition: { duration: 0.3 },
 			},
 			exit: {
-				y: 20,
+				y: 40,
 				opacity: 0,
 				transition: { duration: 0.3 },
 			},
@@ -163,7 +163,7 @@ export const defaultItemAnimationVariants: Record<
 				transition: { duration: 0.3 },
 			},
 			exit: {
-				x: -20,
+				x: -40,
 				opacity: 0,
 				transition: { duration: 0.3 },
 			},
@@ -172,7 +172,7 @@ export const defaultItemAnimationVariants: Record<
 	slideRight: {
 		container: defaultContainerVariants,
 		item: {
-			hidden: { x: -20, opacity: 0 },
+			hidden: { x: -40, opacity: 0 },
 			show: {
 				x: 0,
 				opacity: 1,

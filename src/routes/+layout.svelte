@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { LayoutProps } from './$types';
-	import './layout.css';
 	import { page } from '$app/state';
 	import favicon from '$images/favicon.png';
 	import { Toaster } from '$lib/components/ui/sonner';
+	import '$styles/index.css';
 
 	const { children }: LayoutProps = $props();
 
@@ -30,10 +30,30 @@
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="светпознания.рф" />
 	<meta property="og:type" content="website" />
+
+	<link
+		rel="preload"
+		as="font"
+		fetchpriority="high"
+		href="/fonts/ivy-presto/ivy-presto-headline-light.otf"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		as="font"
+		fetchpriority="high"
+		href="/fonts/neoris/TT Neoris Trial Light.ttf"
+		crossorigin="anonymous"
+	/>
+	<link
+		rel="preload"
+		as="font"
+		fetchpriority="high"
+		href="/fonts/neoris/TT Neoris Trial Variable.ttf"
+		crossorigin="anonymous"
+	/>
 </svelte:head>
 
 <Toaster />
 
-<main>
-	{@render children()}
-</main>
+{@render children()}

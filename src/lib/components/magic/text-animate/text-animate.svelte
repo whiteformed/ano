@@ -14,7 +14,7 @@
 		/**
 		 * The text content to animate
 		 */
-		content: string;
+		text: string;
 		/**
 		 * The class name to be applied to the component
 		 */
@@ -63,13 +63,13 @@
 
 	// as = "span",
 	let {
-		content,
+		text,
 		class: className = '',
 		segmentClass = '',
 		delay = 0,
 		duration = 0.3,
 		variants,
-		by = 'word',
+		by = 'text',
 		startOnView = true,
 		once = false,
 		animation = 'fadeIn',
@@ -77,26 +77,26 @@
 	}: TextAnimateProps = $props();
 
 	let segments: string[] = $derived.by(() => {
-		if (!content) return [];
-		let text = content;
+		if (!text) return [];
+		let content = text;
 		switch (by) {
 			case 'word':
-				return text.split(/(\s+)/);
+				return content.split(/(\s+)/);
 
 			case 'character':
-				return text.split('');
+				return content.split('');
 
 			case 'line':
 				// split by \n or \r\n or \\n
 				// trim each line
 				return (
-					text.split('\\n').map((line) => line.trim()) ||
-					text.split('\n').map((line) => line.trim())
+					content.split('\\n').map((line) => line.trim()) ||
+					content.split('\n').map((line) => line.trim())
 				);
 
 			case 'text':
 			default:
-				return [text];
+				return [content];
 		}
 	});
 
@@ -146,9 +146,6 @@
 					}
 				: { container: defaultContainerVariants, item: defaultItemVariants },
 	);
-
-	// $inspect(segments, "Segments");
-	// $inspect(content, "Content");
 </script>
 
 <AnimatePresence mode="popLayout">
@@ -163,7 +160,7 @@
 		class={cn('whitespace-pre-wrap', className)}
 	>
 		{#if accessible}
-			<span class="sr-only">{content}</span>
+			<span class="sr-only">{text}</span>
 		{/if}
 		{#each segments as segment, i (i)}
 			<motion.span

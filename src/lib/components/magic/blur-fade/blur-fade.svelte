@@ -36,14 +36,14 @@
 		containerClass: containerClassName,
 		variant,
 		exit = false,
-		duration = 0.4,
+		duration = 0.3,
 		delay = 0,
 		offset = 6,
 		direction = 'down',
 		ease = 'easeOut',
 		triggerOnView = true,
 		inViewMargin = '-50px',
-		blur = '0',
+		blur = '0px',
 		once = true,
 	}: BlurFadeProps = $props();
 

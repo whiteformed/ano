@@ -143,6 +143,7 @@
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
 		will-change: transform;
+		animation-play-state: paused;
 	}
 
 	.spell-marquee__scroller--horizontal {

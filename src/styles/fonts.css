@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'IvyPresto Healdine Light';
+	src: url('/fonts/ivy-presto/ivy-presto-headline-light.otf');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Neoris Light';
+	src: url('/fonts/neoris/TT Neoris Trial Light.ttf');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Neoris Variable';
+	src: url('/fonts/neoris/TT Neoris Trial Variable.ttf');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}

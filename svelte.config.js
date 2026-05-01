@@ -8,7 +8,9 @@ const config = {
 			$components: 'src/components',
 			$lib: 'src/lib',
 			$pages: 'src/pages',
+			$icons: 'src/assets/icons',
 			$images: 'src/assets/images',
+			$styles: 'src/styles',
 		},
 	},
 	compilerOptions: {

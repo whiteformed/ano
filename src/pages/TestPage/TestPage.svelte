@@ -1,63 +1,49 @@
-<script lang="ts">
-	import * as SectionScroll from '$components/SectionScroll';
+<script>
+	import { GlowingEffect } from '$components/GlowingEffect';
+	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
 	import Lotus from '$images/favicon.png';
 	import { BlurFade } from '$lib/components/magic/blur-fade';
 	import { DitherShader } from '$lib/components/magic/dither-shader';
 	import { HyperText } from '$lib/components/magic/hyper-text';
+	import { LightRays } from '$lib/components/magic/light-rays';
 
-	let sections = [
-		{
-			title: 'Section 0',
-			color: '#ff6b6b',
-			content: 'Welcome to smooth scrolling!',
-			colorMode: 'original',
-		},
-		{
-			title: 'Section 1',
-			color: '#4ecdc4',
-			content: 'Smooth transitions between sections',
-			colorMode: 'grayscale',
-		},
-		{
-			title: 'Section 2',
-			color: '#45b7d1',
-			content: 'Powered by GSAP and Svelte 5',
-			colorMode: 'duotone',
-		},
-		{
-			title: 'Section 3',
-			color: '#96ceb4',
-			content: 'Enjoy the smooth experience!',
-			invert: true,
-		},
-	];
+	// import { MorphingText } from '$lib/components/magic/morphing-text';
+	// import { RotatingText } from '$lib/components/magic/rotating-text';
 </script>
 
-<SectionScroll.Root>
-	{#each sections as section, index (index)}
-		<SectionScroll.Item>
-			<div class="h-full">
-				<div
-					class="h-screen w-screen flex justify-center items-center"
-					style="background-color: {section.color}"
-				>
-					<BlurFade
-						delay={0.1}
-						offset={40}
-						duration={0.4}
-						class="h-fit w-fit flex flex-col items-center"
-					>
-						<HyperText text={section.title} class="w-fit text-4xl md:text-6xl" />
-						<DitherShader
-							src={Lotus}
-							class="h-40 w-40"
-							colorMode={section.colorMode as 'custom'}
-							invert={section.invert}
-						/>
-						{section.content}
-					</BlurFade>
-				</div>
+<div class="relative bg-background h-screen w-screen flex flex-col justify-center items-center">
+	<LightRays class="bg-background" />
+	<BlurFade
+		delay={0.2}
+		offset={40}
+		duration={0.4}
+		containerClass="w-full h-full flex flex-col justify-center items-center"
+		class="h-full flex flex-col justify-center items-center"
+	>
+		<!-- СВЕТ<MorphingText words={['НАУКИ.', 'КУЛЬТУРЫ.', 'ИСКУССТВА.', 'ПОЗНАНИЯ.']} /> -->
+
+		<!-- <span class="font-mono text-4xl md:text-6xl">СВЕТ</span>
+		<RotatingText
+			class="font-mono text-4xl md:text-6xl"
+			words={['НАУКИ', 'КУЛЬТУРЫ', 'ИСКУССТВА', 'ПОЗНАНИЯ']}
+			duration={1000}
+		/> -->
+		<div class="flex flex-col justify-center items-center flex-1">
+			<HyperText text="СВЕТПОЗНАНИЯ." />
+
+			<div class="relative rounded-xl">
+				<GlowingEffect
+					borderWidth={2}
+					spread={40}
+					glow={true}
+					disabled={false}
+					proximity={64}
+					inactiveZone={0.01}
+				/>
+
+				<DitherShader src={Lotus} class="h-40 w-40 rounded-xl overflow-hidden" />
 			</div>
-		</SectionScroll.Item>
-	{/each}
-</SectionScroll.Root>
+		</div>
+	</BlurFade>
+	<WordDelimiter text="ПОНЯТИЕ" />
+</div>
