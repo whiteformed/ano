@@ -4,6 +4,7 @@
 @import '@fontsource-variable/inter';
 
 @import './fonts.css';
+@import './utilities.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
 

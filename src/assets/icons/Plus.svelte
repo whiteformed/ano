@@ -1,0 +1,3 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M15.9937 0V32M32 15.994L0 15.994" stroke="black" stroke-width="1.5" />
+</svg>

@@ -1,0 +1,8 @@
+@utility text-trim-* {
+	text-box-trim: --value('none', 'trim-both', 'trim-start', 'trim-end');
+	text-box-edge: cap alphabetic;
+}
+
+@utility text-edge-* {
+	text-box-edge: --value(--text-edge-*, 'text', 'cap', 'alphabetic', 'ideographic', 'ex', [*]);
+}

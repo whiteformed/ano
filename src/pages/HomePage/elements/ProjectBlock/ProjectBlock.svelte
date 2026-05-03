@@ -5,8 +5,8 @@
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
 </script>
 
-<WordDelimiter text="О ПРОЕКТЕ" />
-<div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-15 mb-30">
+<WordDelimiter text="О проекте" />
+<div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-15 mb-50">
 	<div class="col-span-2 flex flex-col gap-4.5">
 		<img src={Image1} alt="" />
 		<div class="flex justify-between text-xl">

@@ -1,2 +1,11 @@
 export { default as IntroBlock } from './IntroBlock/IntroBlock.svelte';
 export { default as ProjectBlock } from './ProjectBlock/ProjectBlock.svelte';
+export { default as MethodBlock } from './MethodBlock/MethodBlock.svelte';
+export { default as ShowcaseBlock } from './ShowcaseBlock/ShowcaseBlock.svelte';
+export { default as ResultsBlock } from './ResultsBlock/ResultsBlock.svelte';
+export { default as PartnersBlock } from './PartnersBlock/PartnersBlock.svelte';
+export { default as FormatBlock } from './FormatBlock/FormatBlock.svelte';
+export { default as CulturalAgendaBlock } from './CulturalAgendaBlock/CulturalAgendaBlock.svelte';
+export { default as HowWeOperateBlock } from './HowWeOperateBlock/HowWeOperateBlock.svelte';
+export { default as FounderBlock } from './FounderBlock/FounderBlock.svelte';
+export { default as ContactsBlock } from './ContactsBlock/ContactsBlock.svelte';
