@@ -26,13 +26,13 @@
 			художественный эксперимент и современные форматы просвещения.
 		</span>
 	</div>
-	<span class="col-start-3 col-span-6 text-[32px] leading-10 whitespace-pre-line uppercase mt-31">
-		{`миссия – Исследовать свет как универсальный принцип культуры, знания
-        и созидания через лаборатории, выставки и просветительские форматы.`}
+	<span class="col-start-3 col-span-6 text-[32px] leading-10 uppercase mt-31">
+		миссия – Исследовать свет как универсальный принцип культуры, знания и созидания через
+		лаборатории, выставки и просветительские форматы.
 	</span>
-	<span class="col-start-5 col-span-4 text-2xl leading-7.5 whitespace-pre-line mt-3">
-		{`Соединять науку о свете, культурное наследие и художественную
-        практику в образовательных и публичных проектах.`}
+	<span class="col-start-5 col-span-4 text-2xl leading-7.5 mt-3">
+		Соединять науку о свете, культурное наследие и художественную практику в образовательных и
+		публичных проектах.
 	</span>
 	<div class="col-start-2 col-span-7 grid grid-cols-subgrid grid-flow-row gap-x-4 mt-10">
 		<img src={Image2} alt="" class="col-span-3" />

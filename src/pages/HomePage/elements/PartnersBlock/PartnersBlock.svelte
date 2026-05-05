@@ -11,13 +11,13 @@
 	<div class="col-start-1 col-span-4">
 		<img src={Image1} alt="" />
 	</div>
-	<div class="col-start-5 col-span-4 bg-card-background pl-14 pt-8 pr-12">
-		<ul class="mb-4 list-[square] list-outside">
+	<div class="col-start-5 col-span-4 bg-card-background pl-8 pt-8 pr-12">
+		<ul class="mb-4">
 			{#each LIST_ITEMS as item, index (index)}
 				<li class="text-4xl whitespace-pre-wrap uppercase mb-6">{item}</li>
 			{/each}
 		</ul>
-		<Button class="w-fit my-8 bg-action-primary hover:opacity-90 active:opacity-80">
+		<Button class="w-fit ml-6 my-8 bg-action-primary hover:opacity-90 active:opacity-80">
 			<span class="uppercase text-secondary flex items-center gap-2.5">
 				обсудить сотрудничество
 				<img src={ArrowRight} class="inline" alt="" />
@@ -25,3 +25,21 @@
 		</Button>
 	</div>
 </div>
+
+<style>
+	ul {
+		padding-left: 1.5em;
+
+		li {
+			position: relative;
+
+			&::before {
+				content: '▪';
+				position: absolute;
+				font-size: 0.6em;
+				transform: translate(-1.5em, 0.4em);
+				display: inline-block;
+			}
+		}
+	}
+</style>

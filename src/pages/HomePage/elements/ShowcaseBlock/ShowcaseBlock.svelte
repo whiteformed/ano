@@ -3,6 +3,7 @@
 	import ImageSide from './images/ShowcaseImageSide.png';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
 	import ArrowRight from '$icons/ArrowRight.svg';
+	import { Lens } from '$lib/components/magic/lens';
 	import * as Carousel from '$lib/components/ui/carousel';
 	import type { CarouselAPI } from '$lib/components/ui/carousel/context';
 	import { cn } from '$lib/utils';
@@ -43,7 +44,9 @@
 		<Carousel.Content>
 			{#each Array(5)}
 				<Carousel.Item>
-					<img src={Image1} alt="" />
+					<Lens>
+						<img src={Image1} alt="" />
+					</Lens>
 				</Carousel.Item>
 			{/each}
 		</Carousel.Content>

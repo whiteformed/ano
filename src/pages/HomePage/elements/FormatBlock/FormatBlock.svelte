@@ -17,7 +17,7 @@
 			]}
 		>
 			<span class="font-ivy-headline-light text-[40px] uppercase">{item.title}</span>
-			<ul class="list-[square] list-outside pl-8">
+			<ul>
 				{#each item.bullets as bullet (bullet)}
 					<li class="text-2xl whitespace-pre-wrap marker:text-m">{bullet}</li>
 				{/each}
@@ -26,3 +26,21 @@
 		</div>
 	{/each}
 </div>
+
+<style>
+	ul {
+		padding-left: 1.5em;
+
+		li {
+			position: relative;
+
+			&::before {
+				content: '▪';
+				position: absolute;
+				font-size: 0.6em;
+				transform: translate(-1.35em, 0.5em);
+				display: inline-block;
+			}
+		}
+	}
+</style>

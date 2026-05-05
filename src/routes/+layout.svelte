@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { LayoutProps } from './$types';
 	import { page } from '$app/state';
-	import Logo from '$icons/Logo.svg';
+	import { Logo } from '$components/Logo';
 	import favicon from '$images/favicon.png';
 	import { Toaster } from '$lib/components/ui/sonner';
 	import '$styles/index.css';
@@ -60,8 +60,7 @@
 <div class="relative w-full px-15 pt-14 pb-12.5">
 	<nav class="w-full">
 		<header class="grid grid-cols-8 gap-4 text-base font-normal uppercase">
-			<img src={Logo} alt="logo" width="87px" height="27px" class="col-span-2" />
-
+			<Logo class="col-span-2" />
 			<div class="col-span-2 flex justify-start items-center">
 				<span>Свет Якутии</span>
 			</div>
@@ -81,7 +80,7 @@
 
 	<footer class="flex justify-between">
 		<div class="col-span-2 flex flex-col items-start">
-			<img src={Logo} alt="logo" width="87px" height="27px" class="col-span-2" />
+			<Logo class="col-span-2" />
 			<span>2026 Все права защищены</span>
 		</div>
 		<div class="col-start-6 col-span-2 flex flex-col gap-1 items-end">
