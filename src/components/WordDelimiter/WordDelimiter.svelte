@@ -49,7 +49,7 @@
 				{#each { length: TOTAL }, index}
 					<span
 						class={[
-							'font-neoris-light text-xl whitespace-pre',
+							'font-neoris-light text-lg whitespace-pre',
 							index !== CENTRAL_POSITION && 'opacity-17',
 						]}
 					>
@@ -57,8 +57,8 @@
 					</span>
 				{/each}
 			</div>
-			<div class="mt-1 h-5 w-px bg-primary top-0 bottom-0"></div>
-			<div class="w-full h-px bg-primary"></div>
+			<div class="mt-1 h-5 w-px bg-primary top-0 bottom-0 opacity-50"></div>
+			<div class="w-full h-px bg-primary opacity-50"></div>
 		</div>
 	</div>
 </BlurFade>
