@@ -77,7 +77,7 @@
 			<Logo class="col-span-2" />
 			<span>2026 Все права защищены</span>
 		</div>
-		<div class="col-start-6 col-span-2 flex flex-col gap-1 items-end">
+		<div class="col-start-6 col-span-2 flex flex-col items-end">
 			<span>Политика конфиденциальности</span>
 			<span>Согласие на обработку персональных данных</span>
 		</div>
