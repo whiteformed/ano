@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { LIST_ITEMS } from './constants';
-	import Image1 from './images/PartnersImage1.png';
+	import Image1 from './images/PartnersImage1.webp';
 	import { ContactButton } from '$components/composed/ContactButton';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
 </script>

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Image1 from './images/ValueImage1.png';
-	import Image2 from './images/ValueImage2.png';
-	import Image3 from './images/ValueImage3.png';
-	import Image4 from './images/ValueImage4.png';
+	import Image1 from './images/ValueImage1.webp';
+	import Image2 from './images/ValueImage2.webp';
+	import Image3 from './images/ValueImage3.webp';
+	import Image4 from './images/ValueImage4.webp';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
 	import { cn } from '$lib/utils/classes';
 	import type { ClassValue } from 'tailwind-variants';

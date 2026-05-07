@@ -1,10 +1,10 @@
-import VeraLinnik from './images/VeraLinnik.png';
-import KonstantinScherbakov from './images/KonstantinScherbakov.png';
-import LyubovIzbitskih from './images/LyubovIzbitskih.png';
-import EgorZadeba from './images/EgorZadeba.png';
-import NyurguyanaGurinova from './images/NyurguyanaGurinova.png';
-import AnastasiaDorbasova from './images/AnastasiaDorbasova.png';
-import AlbinaPermyakova from './images/AlbinaPermyakova.png';
+import VeraLinnik from './images/VeraLinnik.webp';
+import KonstantinScherbakov from './images/KonstantinScherbakov.webp';
+import LyubovIzbitskih from './images/LyubovIzbitskih.webp';
+import EgorZadeba from './images/EgorZadeba.webp';
+import NyurguyanaGurinova from './images/NyurguyanaGurinova.webp';
+import AnastasiaDorbasova from './images/AnastasiaDorbasova.webp';
+import AlbinaPermyakova from './images/AlbinaPermyakova.webp';
 
 type Tag = 'Искусство' | 'Наука' | 'Коммуникации' | 'Культура';
 

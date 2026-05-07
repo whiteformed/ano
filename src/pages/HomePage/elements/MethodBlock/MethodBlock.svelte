@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Image1 from './images/MethodImage1.png';
-	import Image2 from './images/MethodImage2.png';
-	import Image3 from './images/MethodImage3.png';
+	import Image1 from './images/MethodImage1.webp';
+	import Image2 from './images/MethodImage2.webp';
+	import Image3 from './images/MethodImage3.webp';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
 	import { cn } from '$lib/utils/classes';
 	import type { ClassValue } from 'clsx';

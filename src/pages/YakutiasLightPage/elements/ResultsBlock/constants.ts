@@ -1,7 +1,7 @@
-import Image1 from './images/ResultsImage1.png';
-import Image2 from './images/ResultsImage2.png';
-import Image3 from './images/ResultsImage3.png';
-import Image4 from './images/ResultsImage4.png';
+import Image1 from './images/ResultsImage1.webp';
+import Image2 from './images/ResultsImage2.webp';
+import Image3 from './images/ResultsImage3.webp';
+import Image4 from './images/ResultsImage4.webp';
 
 export const RESULTS: { title: string; src: string }[] = [
 	{

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Image1 from './images/ShowcaseImage1.png';
-	import ImageSide from './images/ShowcaseImageSide.png';
+	import Image1 from './images/ShowcaseImage1.webp';
+	import ImageSide from './images/ShowcaseImageSide.webp';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
 	import ArrowRight from '$icons/ArrowRight.svelte';
 	import { Lens } from '$lib/components/magic/lens';

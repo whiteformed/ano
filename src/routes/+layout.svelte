@@ -3,7 +3,7 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import { Logo } from '$components/composed/Logo';
-	import favicon from '$images/favicon.png';
+	import favicon from '$images/favicon.webp';
 	import { Toaster } from '$lib/components/ui/sonner';
 	import { CONTACTS_BLOCK_ID } from '$pages/HomePage/constants';
 	import '$styles/index.css';
@@ -13,8 +13,10 @@
 
 	function getTitleByPathName(path: typeof page.url.pathname) {
 		switch (path) {
+			case encodeURI('/проекты/свет_якутии/'):
+				return 'Свет Якутии | светпознания.рф';
 			default:
-				return 'СВЕТПОЗНАНИЯ.';
+				return 'Главная | светпознания.рф';
 		}
 	}
 
@@ -31,8 +33,8 @@
 	<title>{getTitleByPathName(page.url.pathname)}</title>
 	<meta name="description" content="Свет науки, культуры и искусства" />
 
-	<meta property="og:site_name" content="СВЕТПОЗНАНИЯ." />
-	<meta property="og:title" content="СВЕТПОЗНАНИЯ." />
+	<meta property="og:site_name" content="светпознания.рф" />
+	<meta property="og:title" content="светпознания.рф" />
 	<meta property="og:description" content="Свет науки, культуры и искусства" />
 	<meta property="og:url" content="https://светпознания.рф/" />
 	<meta property="og:image" content={favicon} />
@@ -41,28 +43,6 @@
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="светпознания.рф" />
 	<meta property="og:type" content="website" />
-
-	<link
-		rel="preload"
-		as="font"
-		fetchpriority="high"
-		href="/fonts/ivy-presto/ivy-presto-headline-light.otf"
-		crossorigin="anonymous"
-	/>
-	<link
-		rel="preload"
-		as="font"
-		fetchpriority="high"
-		href="/fonts/neoris/TT Neoris Trial Light.ttf"
-		crossorigin="anonymous"
-	/>
-	<link
-		rel="preload"
-		as="font"
-		fetchpriority="high"
-		href="/fonts/neoris/TT Neoris Trial Variable.ttf"
-		crossorigin="anonymous"
-	/>
 </svelte:head>
 
 <Toaster />

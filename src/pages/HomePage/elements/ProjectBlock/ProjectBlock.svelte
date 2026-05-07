@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Image1 from './images/ProjectImage1.png';
-	import Image2 from './images/ProjectImage2.png';
-	import Image3 from './images/ProjectImage3.png';
+	import Image1 from './images/ProjectImage1.webp';
+	import Image2 from './images/ProjectImage2.webp';
+	import Image3 from './images/ProjectImage3.webp';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
 </script>
 

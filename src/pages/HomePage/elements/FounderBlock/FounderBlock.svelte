@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Image1 from './images/FounderImage1.png';
-	import Image2 from './images/FounderImage2.png';
+	import Image1 from './images/FounderImage1.webp';
+	import Image2 from './images/FounderImage2.webp';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
 </script>
 
