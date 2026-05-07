@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/classes';
 	import {
 		animate,
 		motion,
@@ -136,9 +136,9 @@
 	);
 
 	const rootStyle = $derived.by(() => ({
-		transform: 'translateY(-2px)',
 		color: 'transparent',
 		backgroundClip: 'text',
+		width: 'fit-content',
 		WebkitBackgroundClip: 'text',
 		backgroundSize: '100% 100%',
 		backgroundImage,

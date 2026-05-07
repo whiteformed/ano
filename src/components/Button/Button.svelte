@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/classes';
 	import type { Snippet } from 'svelte';
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 
@@ -13,7 +13,7 @@
 
 <button
 	class={cn(
-		'bg-button-background w-fit h-fit cursor-pointer rounded-full border text-center px-[24.5px] py-3',
+		'bg-button-background w-fit h-fit cursor-pointer rounded-full text-center px-[24.5px] py-3',
 		className,
 	)}
 	{...props}

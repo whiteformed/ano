@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/classes';
 	import {
 		motion,
 		AnimatePresence,
@@ -38,7 +38,7 @@
 		exit = false,
 		duration = 0.3,
 		delay = 0,
-		offset = 6,
+		offset = 0,
 		direction = 'down',
 		ease = 'easeOut',
 		triggerOnView = true,

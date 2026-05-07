@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/classes';
 	import { onMount } from 'svelte';
 
 	type DitheringMode = 'bayer' | 'halftone' | 'noise' | 'crosshatch';

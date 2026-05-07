@@ -4,7 +4,7 @@
 		segmentText,
 		splitGraphemes,
 	} from '$lib/components/utils/text-utils';
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/classes';
 	import {
 		motion,
 		useInView,

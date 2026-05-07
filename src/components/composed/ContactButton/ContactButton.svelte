@@ -1,0 +1,22 @@
+<script lang="ts">
+	import Button from '$components/Button/Button.svelte';
+	import ArrowRight from '$icons/ArrowRight.svelte';
+	import { VERA_LINN_TELEGRAM } from '$lib/constants';
+	import { cn } from '$lib/utils/classes';
+	import type { HTMLAnchorAttributes } from 'svelte/elements';
+
+	interface InteractiveHoverButtonProps extends HTMLAnchorAttributes {
+		class?: string;
+	}
+
+	let { class: className }: InteractiveHoverButtonProps = $props();
+</script>
+
+<a href={VERA_LINN_TELEGRAM} rel="external" target="_blank">
+	<Button class={cn('w-fit bg-action-primary hactive:opacity-90', className)}>
+		<span class="uppercase text-secondary dark:text-primary flex items-center gap-2.5">
+			обсудить сотрудничество
+			<ArrowRight />
+		</span>
+	</Button>
+</a>

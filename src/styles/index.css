@@ -3,10 +3,13 @@
 @import 'shadcn-svelte/tailwind.css';
 @import '@fontsource-variable/inter';
 
-@import './fonts.css';
+@import './semantic-tokens.css';
 @import './utilities.css';
+@import './fonts.css';
 
-@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@custom-variant hactive (&:hover, &:active);
 
 @layer base {
 	* {
@@ -17,25 +20,9 @@
 	}
 	html {
 		@apply font-neoris-variable;
+
+		scroll-behavior: smooth;
 	}
-}
-
-:root {
-	--primary: #111113;
-	--secondary: #ffffff;
-
-	--foreground: #111113;
-	--background: #ffffff;
-
-	--card-background: #f2f2f2;
-	--action-primary: #061d99;
-	--action-secondary: #0824bf;
-}
-
-/* variables for dark theme */
-.dark {
-	--background: oklch(0.145 0 0);
-	--foreground: oklch(1 0 0);
 }
 
 @theme inline {
@@ -54,12 +41,4 @@
 
 	--color-border: var(--border);
 	--color-card-background: var(--card-background);
-
-	--radius-sm: calc(var(--radius) * 0.6);
-	--radius-md: calc(var(--radius) * 0.8);
-	--radius-lg: var(--radius);
-	--radius-xl: calc(var(--radius) * 1.4);
-	--radius-2xl: calc(var(--radius) * 1.8);
-	--radius-3xl: calc(var(--radius) * 2.2);
-	--radius-4xl: calc(var(--radius) * 2.6);
 }

@@ -2,11 +2,11 @@
 	import Image1 from './images/ShowcaseImage1.png';
 	import ImageSide from './images/ShowcaseImageSide.png';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
-	import ArrowRight from '$icons/ArrowRight.svg';
+	import ArrowRight from '$icons/ArrowRight.svelte';
 	import { Lens } from '$lib/components/magic/lens';
 	import * as Carousel from '$lib/components/ui/carousel';
 	import type { CarouselAPI } from '$lib/components/ui/carousel/context';
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/classes';
 
 	let api = $state<CarouselAPI>();
 
@@ -44,7 +44,7 @@
 		<Carousel.Content>
 			{#each Array(5)}
 				<Carousel.Item>
-					<Lens>
+					<Lens zoomFactor={1.5} lensSize={200}>
 						<img src={Image1} alt="" />
 					</Lens>
 				</Carousel.Item>
@@ -67,11 +67,13 @@
 			</div>
 		</div>
 
-		<Carousel.Previous class="bg-action-primary w-15 h-15 inset-s-auto -top-10 right-20">
-			<img src={ArrowRight} alt="" class="rotate-180" />
+		<Carousel.Previous
+			class="bg-action-primary w-15 h-15 inset-s-auto -top-10 right-20 [&>svg]:rotate-180"
+		>
+			<ArrowRight />
 		</Carousel.Previous>
 		<Carousel.Next class="bg-action-primary w-15 h-15 -top-10 right-0">
-			<img src={ArrowRight} alt="" />
+			<ArrowRight />
 		</Carousel.Next>
 	</Carousel.Root>
 </div>

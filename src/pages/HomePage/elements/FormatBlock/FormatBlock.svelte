@@ -19,7 +19,7 @@
 			<span class="font-ivy-headline-light text-[40px] uppercase">{item.title}</span>
 			<ul>
 				{#each item.bullets as bullet (bullet)}
-					<li class="text-2xl whitespace-pre-wrap marker:text-m">{bullet}</li>
+					<li class="text-2xl whitespace-pre-wrap">{bullet}</li>
 				{/each}
 			</ul>
 			<span>{item.subtitle}</span>

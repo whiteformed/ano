@@ -17,8 +17,8 @@
 					<Accordion.Header>
 						<Accordion.Trigger
 							class={[
-								'flex w-full select-none hover:text-action-primary items-center justify-between cursor-pointer',
-								'hover:[&>span>svg>path]:stroke-action-primary',
+								'flex w-full select-none hactive:text-action-primary items-center justify-between cursor-pointer',
+								'hactive:[&>span>svg>path]:stroke-action-primary',
 							]}
 						>
 							<span

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/classes';
 	import { motion, AnimatePresence } from 'motion-sv';
 	import { onMount, type Snippet } from 'svelte';
 	import type { SvelteHTMLElements } from 'svelte/elements';

@@ -2,7 +2,7 @@
 	import type { Picture } from '@sveltejs/enhanced-img';
 	import Modal from '$components/Modal/Modal.svelte';
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/classes';
 	import type { EmblaCarouselType } from 'embla-carousel';
 	import type { HTMLImgAttributes } from 'svelte/elements';
 	import { v4 as uuidv4 } from 'uuid';

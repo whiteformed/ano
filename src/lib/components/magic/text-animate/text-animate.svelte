@@ -6,7 +6,7 @@
 		staggerTimings,
 	} from './constants';
 	import { type AnimationType, type AnimationVariant } from './types';
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/classes';
 	import type { MotionProps, Variants } from 'motion-sv';
 	import { motion, AnimatePresence } from 'motion-sv';
 

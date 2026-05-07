@@ -1,0 +1,23 @@
+:root,
+[data-theme='light'] {
+	--primary: #111113;
+	--secondary: #ffffff;
+
+	--foreground: #111113;
+	--background: #ffffff;
+
+	--card-background: #f2f2f2;
+	--action-primary: #061d99;
+	--action-secondary: #0824bf;
+}
+
+/* variables for dark theme */
+[data-theme='dark'] {
+	--primary: #ffffff;
+	--secondary: #111113;
+
+	--foreground: #ffffff;
+	--background: #111113;
+
+	--card-background: #5d5c5c;
+}

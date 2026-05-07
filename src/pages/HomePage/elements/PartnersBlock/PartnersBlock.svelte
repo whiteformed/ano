@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { LIST_ITEMS } from './constants';
 	import Image1 from './images/PartnersImage1.png';
-	import Button from '$components/Button/Button.svelte';
+	import { ContactButton } from '$components/composed/ContactButton';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
-	import ArrowRight from '$icons/ArrowRight.svg';
 </script>
 
 <WordDelimiter text="Для партнеров" />
@@ -17,12 +16,7 @@
 				<li class="text-4xl whitespace-pre-wrap uppercase mb-6">{item}</li>
 			{/each}
 		</ul>
-		<Button class="w-fit ml-6 my-8 bg-action-primary hover:opacity-90 active:opacity-80">
-			<span class="uppercase text-secondary flex items-center gap-2.5">
-				обсудить сотрудничество
-				<img src={ArrowRight} class="inline" alt="" />
-			</span>
-		</Button>
+		<ContactButton class="ml-6 my-8" />
 	</div>
 </div>
 

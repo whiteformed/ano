@@ -8,7 +8,7 @@
 		text: string;
 	};
 
-	const TOTAL = 21;
+	const TOTAL = 41;
 	const CENTRAL_POSITION = Math.floor(TOTAL / 2);
 	const { text }: Props = $props();
 

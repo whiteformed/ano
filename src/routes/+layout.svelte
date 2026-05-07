@@ -1,10 +1,13 @@
 <script lang="ts">
 	import type { LayoutProps } from './$types';
+	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import { Logo } from '$components/Logo';
+	import { Logo } from '$components/composed/Logo';
 	import favicon from '$images/favicon.png';
 	import { Toaster } from '$lib/components/ui/sonner';
+	import { CONTACTS_BLOCK_ID } from '$pages/HomePage/constants';
 	import '$styles/index.css';
+	import { onMount } from 'svelte';
 
 	const { children }: LayoutProps = $props();
 
@@ -14,6 +17,13 @@
 				return 'СВЕТПОЗНАНИЯ.';
 		}
 	}
+
+	onMount(() => {
+		const { hash } = document.location;
+		const decodedHash = decodeURIComponent(hash);
+		const scrollTo = hash && document.getElementById(decodedHash.slice(1));
+		if (scrollTo) scrollTo.scrollIntoView({ behavior: 'smooth' });
+	});
 </script>
 
 <svelte:head>
@@ -57,15 +67,15 @@
 
 <Toaster />
 
-<div class="relative w-full px-15 pt-14 pb-12.5">
+{#snippet header()}
 	<nav class="w-full">
 		<header class="grid grid-cols-8 gap-4 text-base font-normal uppercase">
 			<Logo class="col-span-2" />
 			<div class="col-span-2 flex justify-start items-center">
-				<span>Свет Якутии</span>
+				<a href={resolve('/проекты/свет_якутии/')}>Свет Якутии</a>
 			</div>
 			<div class="col-span-2 text-right flex justify-end items-center">
-				<span>Контакты</span>
+				<a href={resolve(`${page.url.pathname as '/'}#${CONTACTS_BLOCK_ID}`)}>Контакты</a>
 			</div>
 
 			<div class="col-span-2 text-right flex justify-end items-center">
@@ -73,6 +83,10 @@
 			</div>
 		</header>
 	</nav>
+{/snippet}
+
+<div class="relative w-full px-15 pt-14 pb-12.5">
+	{@render header()}
 
 	<main>
 		{@render children()}

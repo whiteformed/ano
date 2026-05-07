@@ -1,8 +1,8 @@
-export const STAGES: { title: string; row: number; col: number }[] = [
-	{ title: 'Запрос партнёра', row: 1, col: 1 },
-	{ title: 'Выбор тематики', row: 1, col: 3 },
-	{ title: 'Разработка программы', row: 1, col: 5 },
-	{ title: 'Проведение лаборатории', row: 1, col: 7 },
-	{ title: 'Итоговый показ', row: 2, col: 3 },
-	{ title: 'Дальнейшие интеграции', row: 2, col: 5 },
+export const STAGES: { title: string; className: string }[] = [
+	{ title: 'Запрос партнёра', className: 'row-start-1 col-start-1' },
+	{ title: 'Выбор тематики', className: 'row-start-1 col-start-3' },
+	{ title: 'Разработка программы', className: 'row-start-1 col-start-5' },
+	{ title: 'Проведение лаборатории', className: 'row-start-1 col-start-7' },
+	{ title: 'Итоговый показ', className: 'row-start-2 col-start-3' },
+	{ title: 'Дальнейшие интеграции', className: 'row-start-2 col-start-5' },
 ];

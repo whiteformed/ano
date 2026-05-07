@@ -14,7 +14,7 @@
 			<span>2025</span>
 		</div>
 	</div>
-	<div class="col-start-5 col-span-4 flex flex-col gap-3 text-2xl leading-7.5">
+	<div class="col-start-5 col-span-4 flex flex-col gap-3 text-2xl">
 		<span>
 			Светотворчество — образовательно-культурная инициатива и программа арт-лабораторий,
 			развивающая современную культуру света через искусство, исследование и просвещение. Это
@@ -26,11 +26,11 @@
 			художественный эксперимент и современные форматы просвещения.
 		</span>
 	</div>
-	<span class="col-start-3 col-span-6 text-[32px] leading-10 uppercase mt-31">
+	<span class="col-start-3 col-span-6 text-4xl uppercase mt-31">
 		миссия – Исследовать свет как универсальный принцип культуры, знания и созидания через
 		лаборатории, выставки и просветительские форматы.
 	</span>
-	<span class="col-start-5 col-span-4 text-2xl leading-7.5 mt-3">
+	<span class="col-start-5 col-span-4 text-2xl mt-3">
 		Соединять науку о свете, культурное наследие и художественную практику в образовательных и
 		публичных проектах.
 	</span>

@@ -2,7 +2,7 @@
 	import { getEmblaContext } from './context.js';
 	import ChevronRightIcon from '@lucide/svelte/icons/chevron-right';
 	import { Button, type Props } from '$lib/components/ui/button/index.js';
-	import { cn } from '$lib/utils.js';
+	import { cn } from '$lib/utils/classes';
 
 	let {
 		ref = $bindable(null),
@@ -23,7 +23,7 @@
 	aria-disabled={!emblaCtx.canScrollNext}
 	disabled={!emblaCtx.canScrollNext}
 	class={cn(
-		'w-fit bg-action-primary hover:opacity-90 active:opacity-80 rounded-full absolute cursor-pointer',
+		'w-fit bg-action-primary hactive:opacity-90 rounded-full absolute cursor-pointer',
 		emblaCtx.orientation === 'horizontal'
 			? '-inset-e-12 top-1/2 -translate-y-1/2'
 			: 'inset-s-1/2 -bottom-12 -translate-x-1/2 rotate-90',

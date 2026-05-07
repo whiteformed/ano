@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from '$lib/utils';
+	import { cn } from '$lib/utils/classes';
 	import type { Snippet } from 'svelte';
 	import type { HTMLAnchorAttributes } from 'svelte/elements';
 
@@ -11,9 +11,6 @@
 	const { children, class: classNameValue, ...props }: Props = $props();
 </script>
 
-<a
-	class={cn('w-fit text-action-primary hover:opacity-85 active:opacity-85', classNameValue)}
-	{...props}
->
+<a class={cn('w-fit text-action-primary hactive:opacity-85', classNameValue)} {...props}>
 	{@render children()}
 </a>

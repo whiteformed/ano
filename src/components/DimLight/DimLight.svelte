@@ -44,7 +44,7 @@
 			gradient1.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
 			const gradient2 = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 400);
-			gradient2.addColorStop(0, 'rgba(150, 150, 255, 0.05)');
+			gradient2.addColorStop(0, 'rgba(150, 150, 255, 0.1)');
 			gradient2.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
 			ctx.fillStyle = gradient2;

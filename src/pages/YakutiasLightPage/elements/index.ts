@@ -1,0 +1,9 @@
+export { default as IntroBlock } from './IntroBlock/IntroBlock.svelte';
+export { default as ProjectBlock } from './ProjectBlock/ProjectBlock.svelte';
+export { default as ValueBlock } from './ValueBlock/ValueBlock.svelte';
+export { default as MethodBlock } from './MethodBlock/MethodBlock.svelte';
+export { default as ThemesBlock } from './ThemesBlock/ThemesBlock.svelte';
+export { default as TimelineBlock } from './TimelineBlock/TimelineBlock.svelte';
+export { default as ResultsBlock } from './ResultsBlock/ResultsBlock.svelte';
+export { default as MembersBlock } from './MembersBlock/MembersBlock.svelte';
+export { default as ContactsBlock } from './ContactsBlock/ContactsBlock.svelte';
