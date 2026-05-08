@@ -6,11 +6,11 @@
 
 <WordDelimiter text="Основатель" />
 <div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-15 mb-50">
-	<span class="col-start-3 col-span-6 text-4xl uppercase mb-5">
+	<span class="col-start-3 col-span-6 text-3xl uppercase mb-5">
 		Вера Линник — медиахудожник и фотограф, основатель инициативы «Светотворчество». Выпускница
 		Школы Родченко и Академии фотографии, член МТС «Таврида.АРТ» и секции science art ТСХР.
 	</span>
-	<span class="row-start-2 col-start-5 col-span-4 text-2xl mb-10">
+	<span class="row-start-2 col-start-5 col-span-4 text-xl mb-10">
 		Работает на стыке искусства, науки и философии света, соединяя выставочную практику,
 		art&science-исследование и авторские образовательные форматы.
 	</span>

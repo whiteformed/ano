@@ -3,6 +3,7 @@
 	import Image1 from './images/PartnersImage1.webp';
 	import { ContactButton } from '$components/composed/ContactButton';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import SquareDot from '$icons/SquareDot.svelte';
 </script>
 
 <WordDelimiter text="Для партнеров" />
@@ -10,30 +11,15 @@
 	<div class="col-start-1 col-span-4">
 		<img src={Image1} alt="" />
 	</div>
-	<div class="col-start-5 col-span-4 bg-card-background pl-8 pt-8 pr-12">
+	<div class="col-start-5 col-span-4 h-fit bg-card-background pt-8 pr-12 pb-10 pl-8">
 		<ul class="mb-4">
 			{#each LIST_ITEMS as item, index (index)}
-				<li class="text-4xl whitespace-pre-wrap uppercase mb-6">{item}</li>
+				<div class="flex items-center gap-1.5 flex-nowrap not-last:mb-6">
+					<div class="w-fit h-fit px-1.5 py-2"><SquareDot /></div>
+					<li class="text-3xl whitespace-pre-wrap uppercase">{item}</li>
+				</div>
 			{/each}
 		</ul>
-		<ContactButton class="ml-6 my-8" />
+		<ContactButton class="mt-8" />
 	</div>
 </div>
-
-<style>
-	ul {
-		padding-left: 1.5em;
-
-		li {
-			position: relative;
-
-			&::before {
-				content: '▪';
-				position: absolute;
-				font-size: 0.6em;
-				transform: translate(-1.5em, 0.4em);
-				display: inline-block;
-			}
-		}
-	}
-</style>

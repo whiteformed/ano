@@ -23,10 +23,8 @@
 	aria-disabled={!emblaCtx.canScrollNext}
 	disabled={!emblaCtx.canScrollNext}
 	class={cn(
-		'w-fit bg-action-primary hactive:opacity-90 rounded-full absolute cursor-pointer',
-		emblaCtx.orientation === 'horizontal'
-			? '-inset-e-12 top-1/2 -translate-y-1/2'
-			: 'inset-s-1/2 -bottom-12 -translate-x-1/2 rotate-90',
+		'w-fit bg-action-primary hactive:bg-action-primary-hover rounded-full absolute cursor-pointer',
+		emblaCtx.orientation === 'horizontal' ? '' : 'rotate-90',
 		className,
 	)}
 	onclick={emblaCtx.scrollNext}

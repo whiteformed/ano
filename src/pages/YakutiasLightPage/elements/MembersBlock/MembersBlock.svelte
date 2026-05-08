@@ -11,10 +11,10 @@
 			<img src={photo} alt="" />
 			<div class="h-full flex flex-col justify-between pt-7 pr-7 pb-5 pl-4">
 				<div class="flex flex-col">
-					<span class="w-fit font-ivy-headline-light text-4xl uppercase text-trim-trim-both mb-4">
+					<span class="w-fit font-ivy-headline-light text-3xl uppercase text-trim-trim-both mb-4">
 						{name}
 					</span>
-					<span class="text-2xl mb-6">
+					<span class="text-xl mb-6">
 						{description}
 					</span>
 				</div>

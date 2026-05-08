@@ -28,6 +28,7 @@
 @theme inline {
 	--font-ivy-headline-light: IvyPresto Healdine Light, sans-serif;
 	--font-neoris-light: Neoris Light, sans-serif;
+	--font-neoris-medium: Neoris Medium, sans-serif;
 	--font-neoris-variable: Neoris Variable, sans-serif;
 
 	--color-foreground: var(--foreground);
@@ -37,6 +38,7 @@
 	--color-secondary: var(--secondary);
 
 	--color-action-primary: var(--action-primary);
+	--color-action-primary-hover: var(--action-primary-hover);
 	--color-action-secondary: var(--action-secondary);
 
 	--color-border: var(--border);

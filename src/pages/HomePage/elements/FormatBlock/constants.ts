@@ -2,6 +2,7 @@ export const CARDS: {
 	title: string;
 	bullets: string[];
 	subtitle?: string;
+	subBullets?: string[];
 }[] = [
 	{
 		title: 'Форматы',
@@ -16,7 +17,8 @@ export const CARDS: {
 	{
 		title: 'Возраст участников',
 		bullets: ['8 - 12 лет', '13 - 16 лет', '17 - 25 лет', 'смешанные группы 17+ лет'],
-		subtitle: 'Количество участников\n4-40 человек',
+		subtitle: 'Количество участников',
+		subBullets: ['4-40 человек'],
 	},
 	{
 		title: 'Длительность',

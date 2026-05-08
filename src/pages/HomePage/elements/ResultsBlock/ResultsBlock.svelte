@@ -22,7 +22,7 @@
 							]}
 						>
 							<span
-								class="w-fit font-ivy-headline-light text-left text-[50px] uppercase text-trim-trim-both mt-10 mb-10"
+								class="w-fit font-ivy-headline-light text-left text-[40px] uppercase text-trim-trim-both mt-10 mb-10"
 							>
 								{item.title}
 							</span>
@@ -43,7 +43,7 @@
 							isOpen && 'mb-10',
 						]}
 					>
-						<span class={['text-2xl transition-opacity']}>
+						<span class={['text-xl transition-opacity']}>
 							{item.description}
 						</span>
 					</Accordion.Content>

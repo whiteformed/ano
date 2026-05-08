@@ -57,7 +57,7 @@
 					</span>
 				{/each}
 			</div>
-			<div class="mt-1 h-5 w-px bg-primary top-0 bottom-0 opacity-30"></div>
+			<div class="h-5 w-px bg-primary top-0 bottom-0 opacity-30"></div>
 			<div class="w-full h-px bg-primary opacity-30"></div>
 		</div>
 	</div>

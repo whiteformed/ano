@@ -6,10 +6,10 @@
 
 <WordDelimiter text="О проекте" />
 <div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-15 mb-50">
-	<span class="col-start-3 col-span-6 text-4xl uppercase">
+	<span class="col-start-3 col-span-6 text-3xl uppercase">
 		Свет Якутии — флагманский проект программы «Светотворчество».
 	</span>
-	<span class="col-start-5 col-span-4 text-2xl mt-3">
+	<span class="col-start-5 col-span-4 text-xl mt-3">
 		Это лаборатория для детей 10–16 лет, где искусство, наука и работа с территорией соединяются в
 		современный визуальный язык. Итог проекта — выставка «Свет Якутии глазами детей». Проект
 		реализуется в контексте Десятилетия науки и технологий и года культуры Республики Саха (Якутия)

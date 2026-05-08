@@ -12,7 +12,7 @@
 
 {#snippet card({ title, src, class: className }: CardProps)}
 	<div class={cn('row-start-3 flex flex-col gap-6 justify-between', className)}>
-		<span class="font-ivy-headline-light text-[40px] uppercase text-trim-trim-both">
+		<span class="font-ivy-headline-light text-[32px] uppercase text-trim-trim-both">
 			{title}
 		</span>
 		<img {src} alt="" />
@@ -21,10 +21,10 @@
 
 <WordDelimiter text="Ценность" />
 <div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-15 mb-50">
-	<span class="col-start-3 col-span-5 text-4xl uppercase text-trim-trim-start">
+	<span class="col-start-3 col-span-5 text-3xl uppercase text-trim-trim-start">
 		Участники работают со светом и фотографией в затемнённой студии
 	</span>
-	<span class="row-start-2 col-start-5 col-span-4 text-2xl mt-3 mb-20">
+	<span class="row-start-2 col-start-5 col-span-4 text-xl mt-3 mb-20">
 		и проходят путь от наблюдения природных и научных явлений к созданию собственных художественных
 		работ. Проект строится на соединении искусства, науки и технологий.
 	</span>

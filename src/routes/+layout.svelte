@@ -49,37 +49,33 @@
 
 {#snippet header()}
 	<nav class="w-full">
-		<header class="grid grid-cols-8 gap-4 text-base font-normal uppercase">
-			<Logo class="col-span-2" />
-			<div class="col-span-2 flex justify-start items-center">
-				<a href={resolve('/проекты/свет_якутии/')}>Свет Якутии</a>
-			</div>
-			<div class="col-span-2 text-right flex justify-end items-center">
-				<a href={resolve(`${page.url.pathname as '/'}#${CONTACTS_BLOCK_ID}`)}>Контакты</a>
-			</div>
-
-			<div class="col-span-2 text-right flex justify-end items-center">
-				<span>2026</span>
-			</div>
+		<header class="flex justify-between items-center pt-8 px-10 pb-7">
+			<a href={resolve('/проекты/свет_якутии/')} class="uppercase">Свет Якутии</a>
+			<Logo />
+			<a href={resolve(`${page.url.pathname as '/'}#${CONTACTS_BLOCK_ID}`)} class="uppercase">
+				Контакты
+			</a>
 		</header>
 	</nav>
 {/snippet}
 
-<div class="relative w-full px-15 pt-14 pb-12.5">
-	{@render header()}
+{#snippet footer()}
+	<footer
+		class="flex justify-between items-center pt-8 px-10 pb-7 text-[16px] border-t border-primary/30"
+	>
+		<Logo />
+		<div class="w-6/10 flex justify-between items-center">
+			<span>Политика конфиденциальности</span>
+			<span>Согласие на обработку персональных данных</span>
+			<span class="opacity-50">2026 Все права защищены</span>
+		</div>
+	</footer>
+{/snippet}
 
+{@render header()}
+<div class="relative w-full px-10">
 	<main>
 		{@render children()}
 	</main>
-
-	<footer class="flex justify-between">
-		<div class="col-span-2 flex flex-col items-start">
-			<Logo class="col-span-2" />
-			<span>2026 Все права защищены</span>
-		</div>
-		<div class="col-start-6 col-span-2 flex flex-col items-end">
-			<span>Политика конфиденциальности</span>
-			<span>Согласие на обработку персональных данных</span>
-		</div>
-	</footer>
 </div>
+{@render footer()}

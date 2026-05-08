@@ -84,7 +84,7 @@
 					<Accordion.Trigger
 						class="flex w-full justify-center select-none items-center transition-all cursor-pointer"
 					>
-						<span class="font-ivy-headline-light text-[50px] uppercase text-trim-trim-both">
+						<span class="font-ivy-headline-light text-[40px] uppercase text-trim-trim-both">
 							{item.title}
 						</span>
 					</Accordion.Trigger>
@@ -106,7 +106,7 @@
 							>
 								<span
 									class={[
-										'subtitle text-2xl opacity-0 transition-opacity grid grid-rows-[0]',
+										'subtitle text-xl opacity-0 transition-opacity grid grid-rows-[0]',
 										visible && 'opacity-100 grid-rows-[1fr]',
 										item.description && 'pt-6',
 									]}

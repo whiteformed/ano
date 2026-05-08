@@ -12,10 +12,10 @@
 {#snippet card({ title, subtitle, src, class: className }: CardProps)}
 	<div class={cn('flex flex-col gap-22 justify-between bg-card-background', className)}>
 		<div class="flex flex-col gap-3 pt-9.5 pl-8 pr-8">
-			<span class="font-ivy-headline-light text-[40px] uppercase text-trim-trim-both">
+			<span class="font-ivy-headline-light text-[32px] uppercase text-trim-trim-both">
 				{title}
 			</span>
-			<span class="text-2xl whitespace-pre-wrap">{subtitle}</span>
+			<span class="text-xl whitespace-pre-wrap">{subtitle}</span>
 		</div>
 		<img {src} alt="" />
 	</div>

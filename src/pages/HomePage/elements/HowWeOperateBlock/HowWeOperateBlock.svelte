@@ -11,7 +11,7 @@
 		<div
 			class={[
 				className,
-				'col-span-2 w-full self-start z-1 select-none text-4xl text-center uppercase',
+				'col-span-2 w-full self-start z-1 select-none text-3xl text-center uppercase',
 			]}
 		>
 			<BlurFade
@@ -19,10 +19,10 @@
 				direction="up"
 				delay={(index + 1) * 0.2}
 			>
-				<span class={['font-ivy-headline-light text-[50px] mt-3']}>{index + 1}</span>
+				<span class={['font-ivy-headline-light text-[50px]']}>{index + 1}</span>
 				<div class="h-4 w-[1.5px] -mb-0.5 bg-primary"></div>
 				<Arrow />
-				<span class={['mt-2']}>{title}</span>
+				<span class={['mt-1']}>{title}</span>
 			</BlurFade>
 		</div>
 	{/each}
