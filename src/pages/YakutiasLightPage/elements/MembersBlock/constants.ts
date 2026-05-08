@@ -2,7 +2,7 @@ import VeraLinnik from './images/VeraLinnik.webp';
 import KonstantinScherbakov from './images/KonstantinScherbakov.webp';
 import LyubovIzbitskih from './images/LyubovIzbitskih.webp';
 import EgorZadeba from './images/EgorZadeba.webp';
-import NyurguyanaGurinova from './images/NyurguyanaGurinova.webp';
+import NyurguyanaUgrinova from './images/NyurguyanaUgrinova.webp';
 import AnastasiaDorbasova from './images/AnastasiaDorbasova.webp';
 import AlbinaPermyakova from './images/AlbinaPermyakova.webp';
 
@@ -48,8 +48,8 @@ export const TEAM_MEMBERS_LIST: {
 		className: 'row-start-2 col-start-1',
 	},
 	{
-		photo: NyurguyanaGurinova,
-		name: 'Нюргуяна Гуринова',
+		photo: NyurguyanaUgrinova,
+		name: 'Нюргуяна Угринова',
 		description:
 			'Культурный и экологический наставник. Главный специалист Министерства экологии, природопользования и лесного хозяйства Республики Саха (Якутия). Куратор слёта «Зелёные пионеры Якутии».',
 		tag: 'Культура',
