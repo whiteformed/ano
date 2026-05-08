@@ -7,7 +7,7 @@
 </script>
 
 <WordDelimiter text="Контакты" />
-<div class="grid grid-cols-8 grid-flow-col gap-x-4 mt-15 mb-50" id={CONTACTS_BLOCK_ID}>
+<div class="grid grid-cols-8 grid-flow-col gap-x-4 mt-15 mb-30" id={CONTACTS_BLOCK_ID}>
 	{#each CONTACTS as item, index (index)}
 		<div
 			class={[
