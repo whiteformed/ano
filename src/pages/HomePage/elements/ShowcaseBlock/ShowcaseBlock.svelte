@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Image1 from './images/ShowcaseImage1.webp';
+	import { SHOWCASES } from './constants';
 	import ImageSide from './images/ShowcaseImageSide.webp';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
 	import ArrowRight from '$icons/ArrowRight.svelte';
@@ -12,12 +12,13 @@
 
 	const count = $derived(api ? api.scrollSnapList().length : 0);
 	let current = $state(0);
+	let currentShowcase = $derived(SHOWCASES[current]);
 
 	$effect(() => {
 		if (api) {
-			current = api.selectedScrollSnap() + 1;
+			current = api.selectedScrollSnap();
 			api.on('select', () => {
-				current = api!.selectedScrollSnap() + 1;
+				current = api!.selectedScrollSnap();
 			});
 		}
 	});
@@ -42,23 +43,23 @@
 		class="row-start-2 col-span-6"
 	>
 		<Carousel.Content>
-			{#each Array(5)}
+			{#each SHOWCASES as { src }, index (index)}
 				<Carousel.Item>
 					<Lens zoomFactor={1.5} lensSize={200}>
-						<img src={Image1} alt="" />
+						<img {src} alt="" />
 					</Lens>
 				</Carousel.Item>
 			{/each}
 		</Carousel.Content>
 		<div class="flex justify-between mt-6">
 			<div class="flex flex-col justify-between">
-				<span class="text-xl">Имя Фамилия “Название”</span>
-				<div class={cn('relative h-2 w-[120%] bg-card-background')}>
+				<span class="text-xl">{currentShowcase.artist}, «{currentShowcase.title}»</span>
+				<div class={cn('relative h-2 w-100 bg-card-background')}>
 					<span
 						class={[
 							'h-full animate-in fade-in transition-all absolute duration-300 ease-linear bg-action-primary',
 						]}
-						style={`width: ${(current / count) * 100}%;`}
+						style={`width: ${((current + 1) / count) * 100}%;`}
 					>
 					</span>
 				</div>
