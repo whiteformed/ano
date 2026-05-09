@@ -1,2 +1,2 @@
-import DiaTextReveal from "./dia-text-reveal.svelte";
+import DiaTextReveal from './dia-text-reveal.svelte';
 export { DiaTextReveal };

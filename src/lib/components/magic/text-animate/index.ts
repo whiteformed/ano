@@ -1,2 +1,2 @@
-import TextAnimate from "./text-animate.svelte";
+import TextAnimate from './text-animate.svelte';
 export { TextAnimate };

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { TEAM_MEMBERS_LIST } from './constants';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { Image } from '$components/Image';
+	import { WordDelimiter } from '$components/WordDelimiter';
 	import { cn } from '$lib/utils/classes';
 </script>
 
@@ -8,7 +9,7 @@
 <div class="grid grid-cols-8 grid-flow-col gap-x-4 gap-y-8 mt-15 mb-50">
 	{#each TEAM_MEMBERS_LIST as { photo, name, description, tag, className } (name)}
 		<div class={cn('col-start-1 col-span-2 flex flex-col bg-card-background', className)}>
-			<img src={photo} alt="" />
+			<Image src={photo} />
 			<div class="h-full flex flex-col justify-between pt-7 pr-7 pb-5 pl-4">
 				<div class="flex flex-col">
 					<span class="w-fit font-ivy-headline-light text-3xl uppercase text-trim-trim-both mb-4">

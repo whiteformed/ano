@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Image1 from './images/CulturalAgendaImage1.webp';
 	import Image2 from './images/CulturalAgendaImage2.webp';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { Image } from '$components/Image';
+	import { WordDelimiter } from '$components/WordDelimiter';
 </script>
 
 <WordDelimiter text="Культурная повестка" />
@@ -16,6 +17,6 @@
 		познания и образа будущего, что делает проект созвучным и современной научно-культурной
 		повестке.
 	</span>
-	<img src={Image1} alt="" class="row-start-3 col-start-1 col-span-4" />
-	<img src={Image2} alt="" class="row-start-3 col-start-5 col-span-3" />
+	<Image src={Image1} class="row-start-3 col-start-1 col-span-4" />
+	<Image src={Image2} class="row-start-3 col-start-5 col-span-3" />
 </div>

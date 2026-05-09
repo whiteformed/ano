@@ -1,2 +1,2 @@
-import HighlightedText from "./highlighted-text.svelte";
+import HighlightedText from './highlighted-text.svelte';
 export { HighlightedText };

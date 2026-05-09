@@ -1,14 +1,9 @@
 <script lang="ts">
-	import type { Picture } from '@sveltejs/enhanced-img';
-	import Modal from '$components/Modal/Modal.svelte';
-	import * as Carousel from '$lib/components/ui/carousel/index.js';
 	import { cn } from '$lib/utils/classes';
-	import type { EmblaCarouselType } from 'embla-carousel';
 	import type { HTMLImgAttributes } from 'svelte/elements';
-	import { v4 as uuidv4 } from 'uuid';
 
 	type Props = Omit<HTMLImgAttributes, 'src'> & {
-		src: string | Picture;
+		src: string;
 		class?: string;
 		groupId?: string;
 		useViewer?: boolean;
@@ -16,89 +11,22 @@
 
 	const {
 		src,
-		alt,
+		alt = '',
 		class: classNameValue,
 		useViewer = false,
-		groupId = uuidv4(),
 		draggable = false,
 		...props
 	}: Props = $props();
-
-	const DATA_GROUP_ATTR = 'data-image-group';
-
-	let ref = $state<HTMLElement>();
-	let modalRef = $state<HTMLElement>();
-	let carouselApi = $state<EmblaCarouselType>();
-
-	const dataAttributes = $derived({
-		...(groupId && { [DATA_GROUP_ATTR]: groupId }),
-	});
-	const imageGroup = $derived(
-		[...document.querySelectorAll(`[${DATA_GROUP_ATTR}="${groupId}"]`)].map((node) =>
-			node.cloneNode(true),
-		),
-	);
-
-	let visible = $state(false);
-
-	function handleToggle() {
-		visible = !visible;
-	}
-
-	function renderNode(nodeToRender: Node) {
-		return (node: HTMLElement) => {
-			node.appendChild(nodeToRender);
-		};
-	}
-
-	$effect(() => {
-		if (!carouselApi || !modalRef) return;
-
-		function handleKeyDown(event: KeyboardEvent) {
-			const key = event.key;
-			const prev = key === 'ArrowLeft';
-			const next = key === 'ArrowRight';
-
-			if (prev || next) {
-				if (prev) carouselApi?.scrollPrev();
-				if (next) carouselApi?.scrollNext();
-			}
-		}
-
-		modalRef.addEventListener('keydown', handleKeyDown);
-
-		return () => {
-			modalRef?.removeEventListener('keydown', handleKeyDown);
-		};
-	});
 </script>
 
 {#snippet image()}
-	<enhanced:img
-		bind:this={ref}
+	<img
 		{src}
 		{alt}
 		class={cn(classNameValue, useViewer && 'cursor-pointer')}
 		{draggable}
-		onclick={handleToggle}
-		{...dataAttributes}
 		{...props}
 	/>
 {/snippet}
 
-{#if useViewer}
-	<Modal bind:visible bind:ref={modalRef}>
-		<div class="h-full w-full max-w-8/10 max-h-8/10 not-md:max-w-full">
-			<Carousel.Root>
-				<Carousel.Content>
-					{#each imageGroup as image, index (index)}
-						<Carousel.Item>
-							<div {@attach renderNode(image)}></div>
-						</Carousel.Item>
-					{/each}
-				</Carousel.Content>
-			</Carousel.Root>
-		</div>
-	</Modal>
-{/if}
 {@render image()}

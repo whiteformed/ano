@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { CARDS } from './constants';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { WordDelimiter } from '$components/WordDelimiter';
 	import SquareDot from '$icons/SquareDot.svelte';
 </script>
 

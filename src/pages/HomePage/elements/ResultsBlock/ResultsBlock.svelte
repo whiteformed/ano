@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { RESULTS_TEXTS } from './constants';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { WordDelimiter } from '$components/WordDelimiter';
 	import Plus from '$icons/Plus.svelte';
 	import { Accordion } from 'bits-ui';
 

@@ -1,1 +1,1 @@
-export { default as Lens } from "./lens.svelte";
+export { default as Lens } from './lens.svelte';

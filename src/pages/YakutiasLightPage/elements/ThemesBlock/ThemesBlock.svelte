@@ -3,7 +3,8 @@
 	import Image2 from './images/ThemeImage2.webp';
 	import Image3 from './images/ThemeImage3.webp';
 	import Image4 from './images/ThemeImage4.webp';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { Image } from '$components/Image';
+	import { WordDelimiter } from '$components/WordDelimiter';
 	import { cn } from '$lib/utils/classes';
 	import type { ClassValue } from 'tailwind-variants';
 
@@ -15,7 +16,7 @@
 		<span class="font-ivy-headline-light text-[32px] uppercase text-trim-trim-both">
 			{title}
 		</span>
-		<img {src} alt="" />
+		<Image {src} />
 	</div>
 {/snippet}
 

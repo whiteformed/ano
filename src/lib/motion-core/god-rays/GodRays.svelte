@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { ComponentProps } from "svelte";
-	import Scene from "./GodRaysScene.svelte";
-	import { cn } from "../utils/cn";
+	import { cn } from '../utils/cn';
+	import Scene from './GodRaysScene.svelte';
+	import type { ComponentProps } from 'svelte';
 
 	type SceneProps = ComponentProps<typeof Scene>;
 
@@ -14,84 +14,84 @@
 		 * Base color of the rays.
 		 * @default "#FFFFFF"
 		 */
-		color?: SceneProps["color"];
+		color?: SceneProps['color'];
 		/**
 		 * Color of the background.
 		 * @default "#17181A"
 		 */
-		backgroundColor?: SceneProps["backgroundColor"];
+		backgroundColor?: SceneProps['backgroundColor'];
 		/**
 		 * Horizontal anchor point of the ray source (0-1).
 		 * @default 0.5
 		 */
-		anchorX?: SceneProps["anchorX"];
+		anchorX?: SceneProps['anchorX'];
 		/**
 		 * Vertical anchor point of the ray source (0-1).
 		 * @default 1.2
 		 */
-		anchorY?: SceneProps["anchorY"];
+		anchorY?: SceneProps['anchorY'];
 		/**
 		 * Horizontal direction of the rays.
 		 * @default 0.0
 		 */
-		directionX?: SceneProps["directionX"];
+		directionX?: SceneProps['directionX'];
 		/**
 		 * Vertical direction of the rays.
 		 * @default -1.0
 		 */
-		directionY?: SceneProps["directionY"];
+		directionY?: SceneProps['directionY'];
 		/**
 		 * Speed multiplier for the animation.
 		 * @default 1.0
 		 */
-		speed?: SceneProps["speed"];
+		speed?: SceneProps['speed'];
 		/**
 		 * The spread of the light rays.
 		 * @default 1.0
 		 */
-		lightSpread?: SceneProps["lightSpread"];
+		lightSpread?: SceneProps['lightSpread'];
 		/**
 		 * The length of the rays.
 		 * @default 1.0
 		 */
-		rayLength?: SceneProps["rayLength"];
+		rayLength?: SceneProps['rayLength'];
 		/**
 		 * Whether the rays should pulsate.
 		 * @default false
 		 */
-		pulsating?: SceneProps["pulsating"];
+		pulsating?: SceneProps['pulsating'];
 		/**
 		 * Distance at which the rays start to fade out.
 		 * @default 1.0
 		 */
-		fadeDistance?: SceneProps["fadeDistance"];
+		fadeDistance?: SceneProps['fadeDistance'];
 		/**
 		 * Saturation of the final ray colors.
 		 * @default 1.0
 		 */
-		saturation?: SceneProps["saturation"];
+		saturation?: SceneProps['saturation'];
 		/**
 		 * Amount of grain/noise applied to the rays.
 		 * @default 0.0
 		 */
-		noiseAmount?: SceneProps["noiseAmount"];
+		noiseAmount?: SceneProps['noiseAmount'];
 		/**
 		 * Amount of wave distortion applied to the rays.
 		 * @default 0.0
 		 */
-		distortion?: SceneProps["distortion"];
+		distortion?: SceneProps['distortion'];
 		/**
 		 * Global ray intensity. Lower values dim and tighten rays, higher values brighten them.
 		 * @default 1.0
 		 */
-		intensity?: SceneProps["intensity"];
+		intensity?: SceneProps['intensity'];
 		[key: string]: unknown;
 	}
 
 	let {
-		class: className = "",
-		color = "#FFFFFF",
-		backgroundColor = "#17181A",
+		class: className = '',
+		color = '#FFFFFF',
+		backgroundColor = '#17181A',
 		anchorX = 0.5,
 		anchorY = 1.2,
 		directionX = 0.0,
@@ -109,7 +109,7 @@
 	}: Props = $props();
 </script>
 
-<div class={cn("relative h-full w-full overflow-hidden", className)} {...rest}>
+<div class={cn('relative h-full w-full overflow-hidden', className)} {...rest}>
 	<div class="absolute inset-0 z-0">
 		<Scene
 			{color}

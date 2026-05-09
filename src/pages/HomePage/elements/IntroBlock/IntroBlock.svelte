@@ -3,6 +3,7 @@
 	import Image2 from './images/IntroImage2.webp';
 	import Image3 from './images/IntroImage3.webp';
 	import { ContactButton } from '$components/composed/ContactButton';
+	import { Image } from '$components/Image';
 	import { BlurFade } from '$lib/components/magic/blur-fade';
 	import { DiaTextReveal } from '$lib/components/magic/dia-text-reveal';
 </script>
@@ -21,12 +22,12 @@
 		</BlurFade>
 	</div>
 	<BlurFade containerClass="row-start-2 col-span-2" delay={0.7}>
-		<img src={Image1} fetchpriority="high" alt="" />
+		<Image src={Image1} fetchpriority="high" />
 	</BlurFade>
 	<BlurFade containerClass="row-start-2 col-span-4" delay={0.7}>
-		<img src={Image2} fetchpriority="high" alt="" />
+		<Image src={Image2} fetchpriority="high" />
 	</BlurFade>
 	<BlurFade containerClass="row-start-2 col-span-2" delay={0.7}>
-		<img src={Image3} fetchpriority="high" alt="" />
+		<Image src={Image3} fetchpriority="high" />
 	</BlurFade>
 </div>

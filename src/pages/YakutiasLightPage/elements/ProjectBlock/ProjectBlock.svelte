@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Image1 from './images/ProjectImage1.webp';
 	import Image2 from './images/ProjectImage2.webp';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { Image } from '$components/Image';
+	import { WordDelimiter } from '$components/WordDelimiter';
 </script>
 
 <WordDelimiter text="О проекте" />
@@ -16,7 +17,7 @@
 		2026.
 	</span>
 	<div class="col-start-1 col-span-8 grid grid-cols-subgrid grid-flow-row gap-x-4 mt-10">
-		<img src={Image1} alt="" class="col-start-1 col-span-2" />
-		<img src={Image2} alt="" class="col-start-4 col-span-5" />
+		<Image src={Image1} class="col-start-1 col-span-2" />
+		<Image src={Image2} class="col-start-4 col-span-5" />
 	</div>
 </div>

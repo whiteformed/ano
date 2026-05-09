@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { RESULTS } from './constants';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { Image } from '$components/Image';
+	import { WordDelimiter } from '$components/WordDelimiter';
 </script>
 
 <WordDelimiter text="Результат" />
@@ -9,7 +10,7 @@
 		<div
 			class={`row-start-${index + 1} col-start-3 col-span-6 flex items-center gap-10 w-full not-first:pt-1.5 not-last:pb-1.5 not-last:border-b`}
 		>
-			<img {src} alt="" class="max-h-63" />
+			<Image {src} class="max-h-63" />
 			<span class="font-ivy-headline-light text-[32px] uppercase text-trim-trim-both">{title}</span>
 		</div>
 	{/each}

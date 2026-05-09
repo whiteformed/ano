@@ -1,16 +1,7 @@
 <script lang="ts">
-	import { onMount } from "svelte";
-	import {
-		Camera,
-		Mesh,
-		Program,
-		Renderer,
-		Transform,
-		Triangle,
-		Vec2,
-		Vec3,
-	} from "ogl";
-	import { type ColorRepresentation, toLinearRgb } from "../helpers/color";
+	import { type ColorRepresentation, toLinearRgb } from '../helpers/color';
+	import { Camera, Mesh, Program, Renderer, Transform, Triangle, Vec2, Vec3 } from 'ogl';
+	import { onMount } from 'svelte';
 
 	interface Props {
 		/**
@@ -91,8 +82,8 @@
 	}
 
 	let {
-		color = "#FFFFFF",
-		backgroundColor = "#17181A",
+		color = '#FFFFFF',
+		backgroundColor = '#17181A',
 		anchorX = 0.5,
 		anchorY = 1.2,
 		directionX = 0.0,
@@ -300,11 +291,7 @@
 	$effect(() => {
 		if (!uniforms) return;
 		applyColor(uniforms.uColor.value, color, [1, 1, 1]);
-		applyColor(uniforms.uBackgroundColor.value, backgroundColor, [
-			23 / 255,
-			24 / 255,
-			26 / 255,
-		]);
+		applyColor(uniforms.uBackgroundColor.value, backgroundColor, [23 / 255, 24 / 255, 26 / 255]);
 		uniforms.uAnchorX.value = anchorX;
 		uniforms.uAnchorY.value = anchorY;
 		uniforms.uRayDir.value.set(directionX, directionY);
@@ -326,13 +313,13 @@
 		const renderer = new Renderer({
 			canvas: targetCanvas,
 			alpha: true,
-			dpr: typeof window !== "undefined" ? window.devicePixelRatio : 1,
+			dpr: typeof window !== 'undefined' ? window.devicePixelRatio : 1,
 		});
 		const gl = renderer.gl;
 		gl.clearColor(0, 0, 0, 0);
 
-		targetCanvas.style.width = "100%";
-		targetCanvas.style.height = "100%";
+		targetCanvas.style.width = '100%';
+		targetCanvas.style.height = '100%';
 
 		const camera = new Camera(gl);
 		camera.position.z = 1;
@@ -341,11 +328,7 @@
 		const geometry = new Triangle(gl);
 
 		const initialColor = toLinearRgb(color, [1, 1, 1]);
-		const initialBackground = toLinearRgb(backgroundColor, [
-			23 / 255,
-			24 / 255,
-			26 / 255,
-		]);
+		const initialBackground = toLinearRgb(backgroundColor, [23 / 255, 24 / 255, 26 / 255]);
 
 		const localUniforms = {
 			uTime: { value: 0.0 },
@@ -354,11 +337,7 @@
 				value: new Vec3(initialColor[0], initialColor[1], initialColor[2]),
 			},
 			uBackgroundColor: {
-				value: new Vec3(
-					initialBackground[0],
-					initialBackground[1],
-					initialBackground[2],
-				),
+				value: new Vec3(initialBackground[0], initialBackground[1], initialBackground[2]),
 			},
 			uAnchorX: { value: anchorX },
 			uAnchorY: { value: anchorY },

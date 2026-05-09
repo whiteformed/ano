@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { SHOWCASES } from './constants';
 	import ImageSide from './images/ShowcaseImageSide.webp';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { Image } from '$components/Image';
+	import { WordDelimiter } from '$components/WordDelimiter';
 	import ArrowRight from '$icons/ArrowRight.svelte';
 	import { Lens } from '$lib/components/magic/lens';
 	import * as Carousel from '$lib/components/ui/carousel';
@@ -36,7 +37,7 @@
             «Частоты 6.0» и коллаборация с НИЯУ МИФИ в павильоне «АТОМ».`}
 		</span>
 	</div>
-	<img src={ImageSide} alt="" class="row-start-2 col-span-2" />
+	<Image src={ImageSide} class="row-start-2 col-span-2" />
 	<Carousel.Root
 		opts={{ loop: true }}
 		setApi={(emblaApi) => (api = emblaApi)}
@@ -46,7 +47,7 @@
 			{#each SHOWCASES as { src }, index (index)}
 				<Carousel.Item>
 					<Lens zoomFactor={1.5} lensSize={200}>
-						<img {src} alt="" />
+						<Image {src} />
 					</Lens>
 				</Carousel.Item>
 			{/each}

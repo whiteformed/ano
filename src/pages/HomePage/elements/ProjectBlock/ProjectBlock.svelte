@@ -2,13 +2,14 @@
 	import Image1 from './images/ProjectImage1.webp';
 	import Image2 from './images/ProjectImage2.webp';
 	import Image3 from './images/ProjectImage3.webp';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { Image } from '$components/Image';
+	import { WordDelimiter } from '$components/WordDelimiter';
 </script>
 
 <WordDelimiter text="О проекте" />
 <div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-15 mb-50">
 	<div class="col-span-2 flex flex-col gap-4.5">
-		<img src={Image1} alt="" />
+		<Image src={Image1} />
 		<div class="flex justify-between text-xl">
 			<span>Имя Фамилия “Название”</span>
 		</div>
@@ -34,7 +35,7 @@
 		публичных проектах.
 	</span>
 	<div class="col-start-2 col-span-7 grid grid-cols-subgrid grid-flow-row gap-x-4 mt-10">
-		<img src={Image2} alt="" class="col-span-3" />
-		<img src={Image3} alt="" class="col-start-4 col-span-4" />
+		<Image src={Image2} class="col-span-3" />
+		<Image src={Image3} class="col-start-4 col-span-4" />
 	</div>
 </div>

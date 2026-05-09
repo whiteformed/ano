@@ -3,6 +3,7 @@
 	import Image2 from './images/IntroImage2.webp';
 	import Image3 from './images/IntroImage3.webp';
 	import { ContactButton } from '$components/composed/ContactButton';
+	import { Image } from '$components/Image';
 </script>
 
 <div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 gap-y-10 mt-21.5 mb-50">
@@ -14,7 +15,7 @@
 		</span>
 		<ContactButton class="mt-8.5" />
 	</div>
-	<img src={Image1} alt="" fetchpriority="high" class="row-start-2 col-span-2" />
-	<img src={Image2} alt="" fetchpriority="high" class="row-start-2 col-span-3" />
-	<img src={Image3} alt="" fetchpriority="high" class="row-start-2 col-span-3" />
+	<Image src={Image1} fetchpriority="high" class="row-start-2 col-span-2" />
+	<Image src={Image2} fetchpriority="high" class="row-start-2 col-span-3" />
+	<Image src={Image3} fetchpriority="high" class="row-start-2 col-span-3" />
 </div>

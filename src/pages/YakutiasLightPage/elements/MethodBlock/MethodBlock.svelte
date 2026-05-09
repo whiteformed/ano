@@ -2,7 +2,8 @@
 	import Image1 from './images/MethodImage1.webp';
 	import Image2 from './images/MethodImage2.webp';
 	import Image3 from './images/MethodImage3.webp';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { Image } from '$components/Image';
+	import { WordDelimiter } from '$components/WordDelimiter';
 	import { cn } from '$lib/utils/classes';
 	import type { ClassValue } from 'clsx';
 
@@ -17,7 +18,7 @@
 			</span>
 			<span class="text-xl whitespace-pre-wrap">{subtitle}</span>
 		</div>
-		<img {src} alt="" />
+		<Image {src} />
 	</div>
 {/snippet}
 

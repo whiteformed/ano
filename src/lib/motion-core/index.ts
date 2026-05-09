@@ -1,1 +1,1 @@
-export { default as GodRays } from "./god-rays/GodRays.svelte";
+export { default as GodRays } from './god-rays/GodRays.svelte';

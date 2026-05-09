@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { STAGES } from './constants';
-	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
+	import { WordDelimiter } from '$components/WordDelimiter';
 	import Arrow from '$icons/Arrow.svelte';
 	import { BlurFade } from '$lib/components/magic/blur-fade';
 </script>
