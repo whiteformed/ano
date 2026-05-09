@@ -14,7 +14,7 @@
 		</span>
 		<ContactButton class="mt-8.5" />
 	</div>
-	<img src={Image1} alt="" class="row-start-2 col-span-2" />
-	<img src={Image2} alt="" class="row-start-2 col-span-3" />
-	<img src={Image3} alt="" class="row-start-2 col-span-3" />
+	<img src={Image1} alt="" fetchpriority="high" class="row-start-2 col-span-2" />
+	<img src={Image2} alt="" fetchpriority="high" class="row-start-2 col-span-3" />
+	<img src={Image3} alt="" fetchpriority="high" class="row-start-2 col-span-3" />
 </div>

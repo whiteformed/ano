@@ -21,12 +21,12 @@
 		</BlurFade>
 	</div>
 	<BlurFade containerClass="row-start-2 col-span-2" delay={0.7}>
-		<img src={Image1} alt="" />
+		<img src={Image1} fetchpriority="high" alt="" />
 	</BlurFade>
 	<BlurFade containerClass="row-start-2 col-span-4" delay={0.7}>
-		<img src={Image2} alt="" />
+		<img src={Image2} fetchpriority="high" alt="" />
 	</BlurFade>
 	<BlurFade containerClass="row-start-2 col-span-2" delay={0.7}>
-		<img src={Image3} alt="" />
+		<img src={Image3} fetchpriority="high" alt="" />
 	</BlurFade>
 </div>

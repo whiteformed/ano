@@ -43,6 +43,9 @@
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="светпознания.рф" />
 	<meta property="og:type" content="website" />
+
+	<meta name="yandex-verification" content="108b5807338a9466" />
+	<meta name="google-site-verification" content="UPG59Fh6at4hZm9pO0rVK2wpNF-znBv2wXi5miWy60A" />
 </svelte:head>
 
 <Toaster />

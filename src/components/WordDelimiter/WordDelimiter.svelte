@@ -47,11 +47,10 @@
 		>
 			<div class="flex gap-5 justify-center items-center overflow-hidden uppercase">
 				{#each { length: TOTAL }, index}
+					{@const secondary = index !== CENTRAL_POSITION}
 					<span
-						class={[
-							'font-neoris-light text-lg whitespace-pre',
-							index !== CENTRAL_POSITION && 'opacity-17',
-						]}
+						class={['font-neoris-light text-lg whitespace-pre', secondary && 'opacity-17']}
+						{...secondary && { 'data-nosnippet': '' }}
 					>
 						{text}
 					</span>
