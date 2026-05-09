@@ -6,4 +6,4 @@ export { default as ThemesBlock } from './ThemesBlock/ThemesBlock.svelte';
 export { default as TimelineBlock } from './TimelineBlock/TimelineBlock.svelte';
 export { default as ResultsBlock } from './ResultsBlock/ResultsBlock.svelte';
 export { default as MembersBlock } from './MembersBlock/MembersBlock.svelte';
-export { default as ContactsBlock } from './ContactsBlock/ContactsBlock.svelte';
+export { default as ContactsBlock } from '$components/composed/blocks/ContactsBlock/ContactsBlock.svelte';

@@ -2,10 +2,10 @@
 	import type { LayoutProps } from './$types';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
+	import { CONTACTS_BLOCK_ID } from '$components/composed/blocks/ContactsBlock/constants';
 	import { Logo } from '$components/composed/Logo';
 	import favicon from '$images/favicon.webp';
 	import { Toaster } from '$lib/components/ui/sonner';
-	import { CONTACTS_BLOCK_ID } from '$pages/HomePage/constants';
 	import '$styles/index.css';
 	import { onMount } from 'svelte';
 
@@ -54,7 +54,7 @@
 	<nav class="w-full">
 		<header class="flex justify-between items-center pt-8 px-10 pb-7">
 			<a href={resolve('/проекты/свет_якутии/')} class="uppercase">Свет Якутии</a>
-			<Logo />
+			<Logo aria-label="go to site main page from header" />
 			<a href={resolve(`${page.url.pathname as '/'}#${CONTACTS_BLOCK_ID}`)} class="uppercase">
 				Контакты
 			</a>
@@ -66,7 +66,7 @@
 	<footer
 		class="flex justify-between items-center pt-8 px-10 pb-7 text-[16px] border-t border-primary/30"
 	>
-		<Logo />
+		<Logo aria-label="go to site main page from footer" />
 		<div class="w-6/10 flex justify-between items-center">
 			<span>Политика конфиденциальности</span>
 			<span>Согласие на обработку персональных данных</span>

@@ -8,4 +8,4 @@ export { default as FormatBlock } from './FormatBlock/FormatBlock.svelte';
 export { default as CulturalAgendaBlock } from './CulturalAgendaBlock/CulturalAgendaBlock.svelte';
 export { default as HowWeOperateBlock } from './HowWeOperateBlock/HowWeOperateBlock.svelte';
 export { default as FounderBlock } from './FounderBlock/FounderBlock.svelte';
-export { default as ContactsBlock } from './ContactsBlock/ContactsBlock.svelte';
+export { default as ContactsBlock } from '$components/composed/blocks/ContactsBlock/ContactsBlock.svelte';

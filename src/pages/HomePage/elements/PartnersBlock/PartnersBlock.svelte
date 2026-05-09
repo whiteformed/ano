@@ -16,7 +16,7 @@
 			{#each LIST_ITEMS as item, index (index)}
 				<div class="flex items-center gap-1.5 flex-nowrap not-last:mb-6">
 					<div class="w-fit h-fit px-1.5 py-2"><SquareDot /></div>
-					<li class="text-3xl whitespace-pre-wrap uppercase">{item}</li>
+					<span class="text-3xl whitespace-pre-wrap uppercase">{item}</span>
 				</div>
 			{/each}
 		</div>

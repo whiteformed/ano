@@ -19,3 +19,5 @@ export const CONTACTS: {
 		phone: '+7 915 292 27 52',
 	},
 ];
+
+export const CONTACTS_BLOCK_ID = 'контакты';

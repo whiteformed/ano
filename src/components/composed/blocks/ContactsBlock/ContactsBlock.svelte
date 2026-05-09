@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CONTACTS_BLOCK_ID } from '../../constants';
+	import { CONTACTS_BLOCK_ID } from './constants';
 	import { CONTACTS } from './constants';
 	import Link from '$components/Link/Link.svelte';
 	import WordDelimiter from '$components/WordDelimiter/WordDelimiter.svelte';
