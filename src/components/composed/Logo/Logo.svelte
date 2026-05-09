@@ -11,6 +11,6 @@
 	let { class: className }: InteractiveHoverButtonProps = $props();
 </script>
 
-<a href={resolve('/')} class={cn('w-fit dark:[&>svg>path]:fill-primary', className)}>
+<a href={resolve('/')} class={cn('w-fit', className)}>
 	<Logo />
 </a>

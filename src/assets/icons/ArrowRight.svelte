@@ -1,6 +1,16 @@
+<script lang="ts">
+	import { cn } from '$lib/utils/classes';
+
+	type Props = {
+		class?: string;
+	};
+
+	let { class: className }: Props = $props();
+</script>
+
 <svg width="30" height="9" viewBox="0 0 30 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<path
 		d="M30 4.33014L22.5 1.38879e-05L22.5 8.66027L30 4.33014ZM0 4.33014L-6.55671e-08 5.08014L23.25 5.08014L23.25 4.33014L23.25 3.58014L6.55671e-08 3.58014L0 4.33014Z"
-		fill="white"
+		class={cn('fill-secondary', className)}
 	/>
 </svg>
