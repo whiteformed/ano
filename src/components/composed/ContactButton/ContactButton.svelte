@@ -14,7 +14,7 @@
 
 <a href={VERA_LINN_TELEGRAM} rel="external" target="_blank">
 	<Button class={cn('w-fit bg-action-primary hactive:bg-action-primary-hover', className)}>
-		<span class="uppercase text-secondary dark:text-primary flex items-center gap-2.5">
+		<span class="uppercase text-action-secondary flex items-center gap-2.5">
 			обсудить сотрудничество
 			<ArrowRight />
 		</span>

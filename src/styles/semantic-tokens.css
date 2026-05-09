@@ -10,6 +10,7 @@
 
 	--action-primary: #061d99;
 	--action-primary-hover: #051a87;
+	--action-secondary: #ffffff;
 }
 
 /* variables for dark theme */
@@ -21,4 +22,8 @@
 	--background: #111113;
 
 	--card-background: #4a4949;
+
+	--action-primary: #061d99;
+	--action-primary-hover: #ffffff;
+	--action-secondary: #ffffff;
 }
