@@ -8,7 +8,7 @@
 </script>
 
 <WordDelimiter text="Результат занятий" />
-<div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-10 mb-40">
+<div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-5 mb-40">
 	<div class="col-start-3 col-span-6">
 		<Accordion.Root bind:value class="w-full" type="single">
 			{#each RESULTS_TEXTS as item (item.title)}
@@ -22,7 +22,7 @@
 							]}
 						>
 							<span
-								class="w-fit font-ivy-headline-light text-left text-[40px] uppercase text-trim-trim-both mt-10 mb-10"
+								class="w-fit font-ivy-headline-light text-left text-[40px] uppercase mt-10 mb-10"
 							>
 								{item.title}
 							</span>

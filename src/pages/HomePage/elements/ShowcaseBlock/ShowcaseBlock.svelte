@@ -52,9 +52,9 @@
 				</Carousel.Item>
 			{/each}
 		</Carousel.Content>
-		<div class="flex justify-between mt-6">
+		<div class="flex justify-between gap-3 mt-6">
 			<div class="flex flex-col justify-between">
-				<span class="text-xl">{currentShowcase.artist}, «{currentShowcase.title}»</span>
+				<span class="text-xl mb-3">{currentShowcase.artist}, «{currentShowcase.title}»</span>
 				<div class={cn('relative h-2 w-100 bg-card-background')}>
 					<span
 						class={[
