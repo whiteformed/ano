@@ -1,7 +1,8 @@
 export { default as IntroBlock } from './IntroBlock/IntroBlock.svelte';
 export { default as ProjectBlock } from './ProjectBlock/ProjectBlock.svelte';
 export { default as ValueBlock } from './ValueBlock/ValueBlock.svelte';
-export { default as MethodBlock } from '$components/composed/blocks/MethodBlock/MethodBlock.svelte';
+export { default as CulturalAgendaBlock } from './CulturalAgendaBlock/CulturalAgendaBlock.svelte';
+export { default as MethodBlock } from './MethodBlock/MethodBlock.svelte';
 export { default as ThemesBlock } from './ThemesBlock/ThemesBlock.svelte';
 export { default as TimelineBlock } from './TimelineBlock/TimelineBlock.svelte';
 export { default as ResultsBlock } from './ResultsBlock/ResultsBlock.svelte';

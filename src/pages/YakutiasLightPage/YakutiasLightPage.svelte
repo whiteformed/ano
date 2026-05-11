@@ -9,12 +9,14 @@
 		ProjectBlock,
 		ResultsBlock,
 		ValueBlock,
+		CulturalAgendaBlock,
 	} from './elements';
 </script>
 
 <IntroBlock />
 <ProjectBlock />
 <ValueBlock />
+<CulturalAgendaBlock />
 <MethodBlock />
 <ThemesBlock />
 <ResultsBlock />

@@ -22,33 +22,26 @@
 
 <WordDelimiter text="Ценность" />
 <div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-15 mb-50">
-	<span class="col-start-3 col-span-5 text-3xl uppercase text-trim-trim-start">
-		Участники работают со светом и фотографией в затемнённой студии
-	</span>
-	<span class="row-start-2 col-start-5 col-span-4 text-xl mt-3 mb-20">
-		и проходят путь от наблюдения природных и научных явлений к созданию собственных художественных
-		работ. Проект строится на соединении искусства, науки и технологий.
-	</span>
 	{@render card({
-		title: 'Свет науки',
+		title: 'Новый образ региона',
 		src: Image1,
 		class: 'col-span-2',
 	})}
 
 	{@render card({
-		title: 'Свет недр',
+		title: 'Вовлечение детей и молодежи',
 		src: Image2,
 		class: 'col-start-3 col-span-2',
 	})}
 
 	{@render card({
-		title: 'Свет природы',
+		title: 'Связь науки, культуры и территории',
 		src: Image3,
 		class: 'col-start-5 col-span-2',
 	})}
 
 	{@render card({
-		title: 'Свет будущего',
+		title: 'Современный формат просвещения',
 		src: Image4,
 		class: 'col-start-7 col-span-2',
 	})}

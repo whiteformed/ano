@@ -1,6 +1,6 @@
 export { default as IntroBlock } from './IntroBlock/IntroBlock.svelte';
 export { default as ProjectBlock } from './ProjectBlock/ProjectBlock.svelte';
-export { default as MethodBlock } from '$components/composed/blocks/MethodBlock/MethodBlock.svelte';
+export { default as MethodBlock } from './MethodBlock/MethodBlock.svelte';
 export { default as ShowcaseBlock } from './ShowcaseBlock/ShowcaseBlock.svelte';
 export { default as ResultsBlock } from './ResultsBlock/ResultsBlock.svelte';
 export { default as PartnersBlock } from './PartnersBlock/PartnersBlock.svelte';

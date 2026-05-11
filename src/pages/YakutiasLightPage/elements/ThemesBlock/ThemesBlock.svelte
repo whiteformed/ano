@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Image1 from './images/ThemeImage1.webp';
-	import Image2 from './images/ThemeImage2.webp';
-	import Image3 from './images/ThemeImage3.webp';
-	import Image4 from './images/ThemeImage4.webp';
+	import Image1 from './images/ThemesImage1.webp';
+	import Image2 from './images/ThemesImage2.webp';
+	import Image3 from './images/ThemesImage3.webp';
+	import Image4 from './images/ThemesImage4.webp';
 	import { Image } from '$components/Image';
 	import { WordDelimiter } from '$components/WordDelimiter';
 	import { cn } from '$lib/utils/classes';
