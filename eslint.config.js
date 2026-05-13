@@ -24,6 +24,7 @@ export default defineConfig(
 			// see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
 			'no-undef': 'off',
 			'svelte/no-useless-mustaches': 'off',
+			'no-irregular-whitespace': 'off',
 		},
 	},
 	{

@@ -5,7 +5,7 @@
 	import { cn } from '$lib/utils/classes';
 </script>
 
-<WordDelimiter text="Команда и наставники" />
+<WordDelimiter text="Команда и наставники" />
 <div class="grid grid-cols-8 grid-flow-col gap-x-4 gap-y-8 mt-15 mb-50">
 	{#each TEAM_MEMBERS_LIST as { photo, name, description, tag, className } (name)}
 		<div class={cn('col-start-1 col-span-2 flex flex-col bg-card-background', className)}>

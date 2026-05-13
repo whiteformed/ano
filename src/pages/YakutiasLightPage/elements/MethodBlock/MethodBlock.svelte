@@ -26,21 +26,21 @@
 <div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-15 mb-50">
 	{@render card({
 		title: 'Наблюдать',
-		subtitle: 'Природные и научные явления света',
+		subtitle: 'Природные и научные явления света',
 		src: Image1,
 		class: 'col-span-2',
 	})}
 
 	{@render card({
 		title: 'Исследовать',
-		subtitle: 'Свет как материал, образ и язык',
+		subtitle: 'Свет как материал, образ и язык',
 		src: Image2,
 		class: 'col-span-2 col-start-3',
 	})}
 
 	{@render card({
-		title: 'Создавать и показывать',
-		subtitle: 'Индивидуальные и коллективные художественные работы',
+		title: 'Создавать и показывать',
+		subtitle: 'Индивидуальные и коллективные художественные работы',
 		src: Image3,
 		class: 'col-span-3 col-start-6',
 	})}

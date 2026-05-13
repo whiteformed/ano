@@ -14,7 +14,7 @@
 		<BlurFade containerClass="row-start-2 col-span-2" delay={0.6}>
 			<span class="text-xl mt-1.5">
 				Культурно-просветительская инициатива, исследующая свет как универсальный принцип культуры,
-				знания и созидания
+				знания и созидания
 			</span>
 		</BlurFade>
 		<BlurFade containerClass="row-start-2 col-span-2" delay={1.5}>

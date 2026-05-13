@@ -31,11 +31,11 @@
 <svelte:head>
 	<link rel="icon" href={favicon} type="image/png" />
 	<title>{getTitleByPathName(page.url.pathname)}</title>
-	<meta name="description" content="Свет науки, культуры и искусства" />
+	<meta name="description" content="Свет науки, культуры и искусства" />
 
 	<meta property="og:site_name" content="светпознания.рф" />
 	<meta property="og:title" content="светпознания.рф" />
-	<meta property="og:description" content="Свет науки, культуры и искусства" />
+	<meta property="og:description" content="Свет науки, культуры и искусства" />
 	<meta property="og:url" content="https://светпознания.рф/" />
 	<meta property="og:image" content={favicon} />
 
@@ -69,7 +69,7 @@
 		<Logo aria-label="go to site main page from footer" />
 		<div class="w-6/10 flex justify-between items-center">
 			<span>Политика конфиденциальности</span>
-			<span>Согласие на обработку персональных данных</span>
+			<span>Согласие на обработку персональных данных</span>
 			<span class="opacity-50">2026 Все права защищены</span>
 		</div>
 	</footer>

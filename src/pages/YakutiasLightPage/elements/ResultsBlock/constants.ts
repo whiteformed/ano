@@ -5,7 +5,7 @@ import Image4 from './images/ResultsImage4.webp';
 
 export const RESULTS: { title: string; src: string }[] = [
 	{
-		title: '20-40 участников',
+		title: '20-40 участников',
 		src: Image1,
 	},
 	{
@@ -13,11 +13,11 @@ export const RESULTS: { title: string; src: string }[] = [
 		src: Image2,
 	},
 	{
-		title: 'Освещение в СМИ',
+		title: 'Освещение в СМИ',
 		src: Image3,
 	},
 	{
-		title: 'Отзывы участников и партнеров',
+		title: 'Отзывы участников и партнеров',
 		src: Image4,
 	},
 ];

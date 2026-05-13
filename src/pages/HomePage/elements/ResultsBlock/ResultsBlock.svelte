@@ -7,7 +7,7 @@
 	let value = $state<string>();
 </script>
 
-<WordDelimiter text="Результат занятий" />
+<WordDelimiter text="Результаты занятий" />
 <div class="grid grid-cols-8 auto-rows-min grid-flow-col gap-x-4 mt-5 mb-40">
 	<div class="col-start-3 col-span-6">
 		<Accordion.Root bind:value class="w-full" type="single">

@@ -19,14 +19,4 @@
 	}: Props = $props();
 </script>
 
-{#snippet image()}
-	<img
-		{src}
-		{alt}
-		class={cn(classNameValue, useViewer && 'cursor-pointer')}
-		{draggable}
-		{...props}
-	/>
-{/snippet}
-
-{@render image()}
+<img {src} {alt} class={cn(classNameValue, useViewer && 'cursor-pointer')} {draggable} {...props} />
