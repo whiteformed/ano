@@ -10,6 +10,8 @@
 		ResultsBlock,
 		CulturalAgendaBlock,
 	} from './elements';
+	import MIFILogo from '$icons/MIFILogo.svelte';
+	import YakutiaLogo from '$icons/YakutiaLogo.svelte';
 </script>
 
 <IntroBlock />
@@ -20,4 +22,4 @@
 <ResultsBlock />
 <TimelineBlock />
 <MembersBlock />
-<ContactsBlock />
+<ContactsBlock featuredLogos={[YakutiaLogo, MIFILogo]} />

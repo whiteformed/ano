@@ -12,6 +12,7 @@
 		ResultsBlock,
 		ShowcaseBlock,
 	} from './elements';
+	import MIFILogo from '$icons/MIFILogo.svelte';
 </script>
 
 <IntroBlock />
@@ -24,4 +25,4 @@
 <CulturalAgendaBlock />
 <HowWeOperateBlock />
 <FounderBlock />
-<ContactsBlock />
+<ContactsBlock featuredLogos={[MIFILogo]} />

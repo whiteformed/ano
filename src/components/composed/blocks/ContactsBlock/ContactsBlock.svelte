@@ -3,7 +3,13 @@
 	import { CONTACTS } from './constants';
 	import Link from '$components/Link/Link.svelte';
 	import { WordDelimiter } from '$components/WordDelimiter';
-	import MIFILogo from '$icons/MIFILogo.svelte';
+	import type { Component } from 'svelte';
+
+	interface Props {
+		featuredLogos?: Component[];
+	}
+
+	let { featuredLogos }: Props = $props();
 </script>
 
 <WordDelimiter text="Контакты" />
@@ -24,7 +30,9 @@
 			{/if}
 		</div>
 	{/each}
-	<div class="row-start-2 col-start-1 w-fit h-fit mt-20">
-		<MIFILogo />
+	<div class="row-start-2 col-start-1 w-fit h-fit mt-20 flex items-center gap-20">
+		{#each featuredLogos as Logo, index (index)}
+			<Logo />
+		{/each}
 	</div>
 </div>
