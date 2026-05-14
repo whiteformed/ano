@@ -22,7 +22,7 @@
 			]}
 		>
 			<span class="font-ivy-headline-light text-[32px] uppercase mb-3">{item.title}</span>
-			<span>{item.name}</span>
+			<span class="font-neoris-medium">{item.name}</span>
 			<a href={`mailto:${item.email}`}>{item.email}</a>
 			<a href={`tel:${item.phone}`}>{item.phone}</a>
 			{#if item.website}
