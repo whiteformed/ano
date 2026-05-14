@@ -31,8 +31,8 @@
 		</div>
 	{/each}
 	<div class="row-start-2 col-start-1 w-fit h-fit mt-20 flex items-center gap-20">
-		{#each featuredLogos as Logo, index (index)}
-			<Logo />
+		{#each featuredLogos as FeaturedLogo, index (index)}
+			<FeaturedLogo />
 		{/each}
 	</div>
 </div>
